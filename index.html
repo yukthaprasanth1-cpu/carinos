@@ -23,7 +23,7 @@ html{
 body{
   min-height:100vh;
   background:#fff8f1;
-  color:#4d3940;
+  color:#503c42;
   font-family:'Quicksand',sans-serif;
   overflow-x:hidden;
 }
@@ -35,7 +35,7 @@ body{
 section{
   min-height:100vh;
   width:100%;
-  padding:50px 20px;
+  padding:55px 18px;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -43,32 +43,20 @@ section{
   position:relative;
 }
 
-/* =========================
-   GENERAL
-========================= */
-
-.card{
-  width:min(92%,700px);
-  background:rgba(255,255,255,.82);
-  border:1px solid rgba(150,110,110,.18);
-  border-radius:25px;
-  padding:35px 25px;
-  box-shadow:0 15px 40px rgba(91,55,60,.08);
-}
-
 h1,h2,h3{
   font-family:'Cormorant Garamond',serif;
-  color:#633f48;
+  color:#68434d;
 }
 
 h1{
-  font-size:clamp(3rem,10vw,5.8rem);
-  line-height:1;
+  font-size:clamp(3rem,10vw,6rem);
+  line-height:1.05;
 }
 
 h2{
-  font-size:clamp(2.2rem,8vw,4rem);
-  margin-bottom:20px;
+  font-size:clamp(2.4rem,8vw,4rem);
+  line-height:1.1;
+  margin-bottom:18px;
 }
 
 p{
@@ -76,19 +64,35 @@ p{
 }
 
 button{
-  border:none;
-  cursor:pointer;
   font-family:'Quicksand',sans-serif;
+  cursor:pointer;
 }
 
-/* =========================
+.main-btn{
+  margin-top:15px;
+  padding:14px 28px;
+  border:0;
+  border-radius:30px;
+  background:#9e6875;
+  color:#fff;
+  font-size:1rem;
+  font-weight:700;
+  box-shadow:0 8px 22px rgba(120,70,80,.18);
+  transition:.2s;
+}
+
+.main-btn:hover{
+  transform:translateY(-2px);
+}
+
+/* =====================
    LOCK
-========================= */
+===================== */
 
 #lock{
   background:
-    radial-gradient(circle at 20% 20%,rgba(255,205,218,.45),transparent 30%),
-    radial-gradient(circle at 80% 80%,rgba(255,224,188,.4),transparent 30%),
+    radial-gradient(circle at 15% 20%,rgba(255,205,218,.45),transparent 30%),
+    radial-gradient(circle at 85% 80%,rgba(255,225,190,.45),transparent 30%),
     #fff8f1;
 }
 
@@ -107,8 +111,8 @@ button{
 }
 
 .lock-subtitle{
+  color:#8d7077;
   margin-bottom:30px;
-  color:#8a6c73;
 }
 
 .question{
@@ -119,177 +123,180 @@ button{
 .question label{
   display:block;
   margin-bottom:8px;
-  font-weight:600;
-  color:#634850;
+  font-weight:700;
+  color:#654851;
 }
 
 .question input{
   width:100%;
   padding:15px 17px;
-  border:1px solid #dec9cd;
+  border:1px solid #ddc6cc;
   border-radius:15px;
-  background:#fff;
+  background:white;
+  font-family:'Quicksand',sans-serif;
   font-size:1rem;
   outline:none;
-  font-family:'Quicksand',sans-serif;
 }
 
 .question input:focus{
-  border-color:#b98591;
-  box-shadow:0 0 0 3px rgba(185,133,145,.12);
-}
-
-.main-btn{
-  margin-top:10px;
-  padding:14px 28px;
-  border-radius:30px;
-  background:#9d6875;
-  color:white;
-  font-size:1rem;
-  font-weight:700;
-  box-shadow:0 8px 20px rgba(157,104,117,.25);
-  transition:.2s;
-}
-
-.main-btn:hover{
-  transform:translateY(-2px);
+  border-color:#a97480;
+  box-shadow:0 0 0 3px rgba(169,116,128,.12);
 }
 
 .error{
-  min-height:24px;
-  margin-top:15px;
-  color:#b54e63;
-  font-size:.92rem;
+  min-height:25px;
+  margin-top:12px;
+  color:#b64e63;
+  font-size:.9rem;
 }
 
-/* =========================
+/* =====================
    SONGS
-========================= */
+===================== */
 
 #songs{
-  background:#fff4f0;
+  background:#fff5f1;
+  text-align:center;
 }
 
 .song-intro{
-  text-align:center;
-  margin-bottom:28px;
+  margin-bottom:30px;
+}
+
+.song-intro p{
+  color:#92747b;
 }
 
 .song-list{
-  width:min(92%,620px);
+  width:min(94%,650px);
   display:flex;
   flex-direction:column;
   gap:15px;
 }
 
 .song-button{
-  background:white;
-  border:1px solid #ead7d7;
+  width:100%;
+  border:1px solid #ead5d9;
   border-radius:20px;
-  padding:20px;
+  padding:19px;
+  background:#fff;
   display:flex;
   align-items:center;
   gap:15px;
   text-align:left;
+  box-shadow:0 8px 22px rgba(80,45,55,.06);
   transition:.25s;
-  box-shadow:0 7px 20px rgba(100,60,70,.06);
 }
 
 .song-button:hover{
   transform:translateY(-3px);
-  border-color:#c999a2;
 }
 
 .song-number{
-  width:42px;
-  height:42px;
+  width:44px;
+  height:44px;
   border-radius:50%;
-  background:#f3d9dd;
+  background:#f2d9de;
   display:flex;
   align-items:center;
   justify-content:center;
   flex-shrink:0;
+  color:#744e57;
+  font-weight:700;
 }
 
 .song-title{
   font-weight:700;
-  color:#5d4149;
+  color:#60434b;
 }
 
 .song-artist{
-  font-size:.88rem;
-  color:#92747b;
   margin-top:3px;
+  color:#98777e;
+  font-size:.88rem;
 }
 
-/* =========================
+.audio-error{
+  margin-top:15px;
+  min-height:22px;
+  color:#a65c68;
+  font-size:.85rem;
+}
+
+/* =====================
    INTRO
-========================= */
+===================== */
 
 #intro{
-  background:#fff9f4;
+  background:#fffaf5;
   text-align:center;
 }
 
 .intro-card{
-  max-width:720px;
+  width:min(92%,720px);
+  padding:38px 28px;
+  border-radius:25px;
+  background:rgba(255,255,255,.85);
+  box-shadow:0 15px 40px rgba(80,50,55,.08);
 }
 
 .intro-flower{
-  font-size:3rem;
-  margin-bottom:15px;
+  font-size:3.2rem;
+  margin-bottom:12px;
 }
 
 .intro-card p{
+  color:#745960;
   font-size:1.08rem;
-  color:#725961;
 }
 
-/* =========================
+/* =====================
    MEMORIES
-========================= */
+===================== */
 
 #memories{
-  background:
-    radial-gradient(circle at 10% 20%,rgba(255,214,225,.35),transparent 25%),
-    #fffaf5;
   justify-content:flex-start;
   padding-top:70px;
+  background:
+    radial-gradient(circle at 15% 15%,rgba(255,214,225,.4),transparent 28%),
+    #fffaf5;
 }
 
 .memories-title{
   text-align:center;
-  margin-bottom:12px;
 }
 
 .memories-subtitle{
   text-align:center;
-  color:#95777d;
-  margin-bottom:35px;
+  color:#94757c;
+  margin-bottom:38px;
 }
 
 .memory-grid{
   width:min(95%,900px);
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:22px;
+  gap:24px;
 }
 
 .memory-card{
   background:#fff;
   padding:12px 12px 18px;
-  border-radius:8px;
-  box-shadow:0 10px 25px rgba(74,45,50,.12);
-  transform:rotate(-1deg);
+  border-radius:7px;
+  box-shadow:0 12px 28px rgba(70,45,50,.12);
   transition:.3s;
 }
 
+.memory-card:nth-child(1){
+  transform:rotate(-1deg);
+}
+
 .memory-card:nth-child(2){
-  transform:rotate(1.5deg);
+  transform:rotate(1.2deg);
 }
 
 .memory-card:nth-child(3){
-  transform:rotate(-.5deg);
+  transform:rotate(-.6deg);
 }
 
 .memory-card:hover{
@@ -297,52 +304,50 @@ button{
 }
 
 .memory-photo{
+  display:block;
   width:100%;
   aspect-ratio:4/5;
   object-fit:cover;
-  display:block;
   border-radius:3px;
-  background:#f7eeee;
+  background:#f8eeee;
+}
+
+.memory-loading{
+  width:100%;
+  aspect-ratio:4/5;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:#f8eeee;
+  color:#96777e;
+  font-size:.85rem;
+  padding:15px;
 }
 
 .memory-caption{
-  text-align:center;
   padding-top:12px;
+  text-align:center;
   font-family:'Cormorant Garamond',serif;
   font-size:1.25rem;
   color:#68464e;
 }
 
-.photo-error{
-  display:none;
-  aspect-ratio:4/5;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  background:#f8eeee;
-  color:#9a777e;
-  padding:15px;
-  font-size:.85rem;
-}
-
-/* Mobile memories */
-
 @media(max-width:700px){
+
   .memory-grid{
     grid-template-columns:1fr;
-    width:min(88%,420px);
+    width:min(88%,400px);
   }
 
   .memory-card{
-    max-width:360px;
     width:100%;
-    margin:auto;
   }
 }
 
-/* =========================
+/* =====================
    PUZZLE
-========================= */
+===================== */
 
 #puzzle{
   background:#fff6f2;
@@ -351,46 +356,45 @@ button{
 
 .puzzle-subtitle{
   max-width:500px;
-  color:#92757b;
+  color:#92747b;
   margin-bottom:25px;
 }
 
 .puzzle-board{
-  width:min(90vw,480px);
+  width:min(92vw,480px);
   aspect-ratio:3/2;
   display:grid;
   grid-template-columns:repeat(3,1fr);
   grid-template-rows:repeat(2,1fr);
   gap:4px;
-  background:#fff;
   padding:4px;
+  background:white;
   border-radius:18px;
-  box-shadow:0 15px 35px rgba(80,45,55,.13);
   overflow:hidden;
+  box-shadow:0 15px 35px rgba(70,45,50,.14);
 }
 
 .puzzle-piece{
-  background-image:url("45B4C78E-F6F0-4160-8CBE-3E776BBA2E0C.jpeg");
-  background-size:300% 200%;
   border-radius:5px;
   cursor:pointer;
+  background-repeat:no-repeat;
   transition:.2s;
 }
 
 .puzzle-piece.selected{
   transform:scale(.94);
-  box-shadow:0 0 0 3px #b47784 inset;
+  box-shadow:0 0 0 3px #a9717c inset;
 }
 
 .puzzle-message{
-  min-height:30px;
+  min-height:32px;
   margin-top:18px;
   color:#86656d;
 }
 
-/* =========================
+/* =====================
    ENVELOPE
-========================= */
+===================== */
 
 #envelope{
   background:#fff9f3;
@@ -403,19 +407,19 @@ button{
 }
 
 .envelope{
-  position:relative;
   width:100%;
   aspect-ratio:1.55/1;
-  background:#e9bfc5;
-  border-radius:10px;
-  box-shadow:0 20px 40px rgba(80,45,50,.15);
+  position:relative;
+  border-radius:12px;
   overflow:hidden;
+  background:#dcaab3;
+  box-shadow:0 20px 40px rgba(80,45,50,.15);
 }
 
 .envelope-back{
   position:absolute;
   inset:0;
-  background:#e7bbc2;
+  background:#e9bec5;
 }
 
 .envelope-letter{
@@ -425,40 +429,38 @@ button{
   width:84%;
   height:82%;
   background:#fffdf9;
-  transition:1s;
   border-radius:4px;
   display:flex;
   align-items:center;
   justify-content:center;
   font-family:'Cormorant Garamond',serif;
-  font-size:1.4rem;
-  color:#7a515b;
+  font-size:1.5rem;
+  color:#76515a;
+  transition:1s;
   z-index:2;
 }
 
 .envelope-flap{
   position:absolute;
-  left:0;
   top:0;
-  width:0;
-  height:0;
-  border-left:50% solid transparent;
-  border-right:50% solid transparent;
-  border-top:48% solid #dbaab3;
-  z-index:4;
+  left:0;
+  width:100%;
+  height:60%;
+  background:#dcaab3;
+  clip-path:polygon(0 0,100% 0,50% 100%);
   transform-origin:top;
   transition:1s;
+  z-index:4;
 }
 
 .envelope-front{
   position:absolute;
-  left:0;
   bottom:0;
-  width:0;
-  height:0;
-  border-left:50% solid transparent;
-  border-right:50% solid transparent;
-  border-bottom:50% solid #d4a1ab;
+  left:0;
+  width:100%;
+  height:55%;
+  background:#d4a1aa;
+  clip-path:polygon(0 100%,50% 15%,100% 100%);
   z-index:3;
 }
 
@@ -472,39 +474,33 @@ button{
 
 .envelope-hint{
   margin-top:25px;
-  color:#8c6c73;
+  color:#8d6d74;
 }
 
-/* =========================
+/* =====================
    LETTER
-========================= */
+===================== */
 
 #letter{
   min-height:auto;
   justify-content:flex-start;
   padding-top:65px;
   padding-bottom:80px;
-  background:
-    repeating-linear-gradient(
-      to bottom,
-      #fffdf7 0px,
-      #fffdf7 31px,
-      #eadde0 32px
-    );
+  background:#fffdf7;
 }
 
 .letter-paper{
-  width:min(92%,760px);
-  padding:45px 35px 65px;
+  width:min(93%,780px);
+  padding:45px 35px 70px;
   background:
     repeating-linear-gradient(
       to bottom,
-      rgba(255,255,255,.96) 0px,
-      rgba(255,255,255,.96) 31px,
-      rgba(220,198,201,.65) 32px
+      #fffdf8 0px,
+      #fffdf8 31px,
+      #eadde0 32px
     );
-  box-shadow:0 12px 35px rgba(75,50,55,.10);
   border-radius:5px;
+  box-shadow:0 12px 35px rgba(75,50,55,.10);
   position:relative;
 }
 
@@ -519,14 +515,12 @@ button{
 }
 
 .letter-content{
-  position:relative;
-  z-index:1;
-  padding-left:35px;
+  padding-left:38px;
 }
 
 .letter-content h2{
   text-align:center;
-  margin-bottom:35px;
+  margin-bottom:38px;
 }
 
 .letter-content p{
@@ -534,13 +528,13 @@ button{
   font-size:1.3rem;
   line-height:1.85;
   color:#5c454b;
-  margin-bottom:28px;
+  margin-bottom:29px;
 }
 
 .letter-highlight{
   text-align:center;
-  font-size:1.45rem !important;
   color:#87545f !important;
+  font-size:1.48rem !important;
 }
 
 .signature{
@@ -550,16 +544,17 @@ button{
 }
 
 @media(max-width:600px){
+
   .letter-paper{
     padding:35px 20px 55px;
   }
 
   .letter-paper:before{
-    left:32px;
+    left:31px;
   }
 
   .letter-content{
-    padding-left:22px;
+    padding-left:23px;
   }
 
   .letter-content p{
@@ -567,9 +562,9 @@ button{
   }
 }
 
-/* =========================
+/* =====================
    JAR
-========================= */
+===================== */
 
 #jarSection{
   background:#fff8f1;
@@ -577,43 +572,41 @@ button{
 }
 
 .jar-subtitle{
-  color:#92747a;
-  margin-bottom:8px;
+  color:#92747b;
 }
 
 .remaining{
+  margin-top:8px;
+  margin-bottom:25px;
   font-weight:700;
   color:#9b6672;
-  margin-bottom:25px;
 }
 
 .jar-area{
-  position:relative;
-  width:270px;
+  width:280px;
   height:350px;
   display:flex;
   align-items:flex-end;
   justify-content:center;
-  margin-bottom:20px;
 }
 
 .jar{
   width:210px;
   height:260px;
+  position:relative;
   border:4px solid rgba(160,125,130,.45);
   border-radius:30px 30px 55px 55px;
-  background:rgba(255,255,255,.34);
+  background:rgba(255,255,255,.4);
   box-shadow:
     inset 0 0 25px rgba(255,255,255,.8),
     0 15px 35px rgba(75,50,55,.12);
-  position:relative;
   cursor:pointer;
 }
 
 .jar:before{
   content:"";
   position:absolute;
-  top:-25px;
+  top:-27px;
   left:15px;
   width:172px;
   height:35px;
@@ -624,75 +617,68 @@ button{
 
 .jar-label{
   position:absolute;
-  top:100px;
+  top:95px;
   left:50%;
-  transform:translateX(-50%);
-  width:135px;
-  padding:12px;
+  transform:translateX(-50%) rotate(-3deg);
+  width:140px;
+  padding:13px;
   background:#fff4dd;
-  border:1px solid #e0cfa9;
+  border:1px solid #dfcea9;
   font-family:'Cormorant Garamond',serif;
   font-size:1.25rem;
   color:#76565d;
-  transform-origin:center;
-  rotate:-3deg;
+}
+
+.note-message{
+  min-height:120px;
+  width:min(92%,520px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
 }
 
 .paper-note{
-  position:absolute;
-  width:145px;
-  min-height:105px;
-  padding:15px;
+  width:155px;
+  min-height:110px;
+  padding:16px;
   background:#fff8c9;
   box-shadow:0 8px 20px rgba(80,55,40,.12);
   font-family:'Cormorant Garamond',serif;
-  font-size:1.05rem;
+  font-size:1.1rem;
   line-height:1.4;
   display:flex;
   align-items:center;
   justify-content:center;
-  text-align:center;
   animation:notePop .45s ease;
-  z-index:10;
 }
 
 @keyframes notePop{
+
   from{
     opacity:0;
-    transform:translateY(30px) scale(.8) rotate(-5deg);
+    transform:translateY(30px) scale(.8);
   }
+
   to{
     opacity:1;
-    transform:translateY(0) scale(1) rotate(0);
+    transform:translateY(0) scale(1);
   }
-}
 
-.note-message{
-  min-height:110px;
-  width:min(90%,500px);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.5rem;
-  color:#6d4b54;
-  padding:20px;
 }
 
 .finish-btn{
   display:none;
 }
 
-/* =========================
+/* =====================
    FINAL
-========================= */
+===================== */
 
 #final{
   overflow:hidden;
   background:#fffaf4;
   text-align:center;
-  min-height:100vh;
 }
 
 .final-content{
@@ -721,10 +707,12 @@ button{
 }
 
 @keyframes finalAppear{
+
   to{
     opacity:1;
     transform:translateY(0);
   }
+
 }
 
 .falling{
@@ -737,56 +725,32 @@ button{
 .falling-item{
   position:absolute;
   top:-40px;
-  font-size:1.5rem;
-  opacity:.75;
   animation:fall linear forwards;
+  opacity:.75;
 }
 
 @keyframes fall{
-  0%{
+
+  from{
     transform:translateY(-50px) rotate(0deg);
   }
-  100%{
+
+  to{
     transform:translateY(110vh) rotate(360deg);
   }
-}
 
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:480px){
-  section{
-    padding-left:15px;
-    padding-right:15px;
-  }
-
-  .card{
-    padding:28px 20px;
-  }
-
-  h2{
-    font-size:2.6rem;
-  }
-
-  .song-button{
-    padding:17px;
-  }
-
-  .puzzle-board{
-    width:94vw;
-  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- =====================================================
-     1. HEART LOCK
-===================================================== -->
+<!-- =====================
+     LOCK
+===================== -->
 
 <section id="lock">
+
   <div class="lock-box">
 
     <div class="lock-icon">🔐</div>
@@ -801,7 +765,7 @@ button{
 
       <div id="lockQuestions"></div>
 
-      <button type="submit" class="main-btn">
+      <button class="main-btn" type="submit">
         Unlock ♡
       </button>
 
@@ -810,32 +774,40 @@ button{
     </form>
 
   </div>
+
 </section>
 
 
-<!-- =====================================================
-     2. SONG SELECTION
-===================================================== -->
+<!-- =====================
+     SONGS
+===================== -->
 
 <section id="songs" class="hidden">
 
   <div class="song-intro">
+
     <h2>Choose a song 🎵</h2>
-    <p>Pick the one you want to listen to while you continue.</p>
+
+    <p>
+      Pick one before we continue.
+    </p>
+
   </div>
 
   <div id="songList" class="song-list"></div>
 
+  <div id="audioError" class="audio-error"></div>
+
 </section>
 
 
-<!-- =====================================================
-     3. BIRTHDAY INTRO
-===================================================== -->
+<!-- =====================
+     INTRO
+===================== -->
 
 <section id="intro" class="hidden">
 
-  <div class="card intro-card">
+  <div class="intro-card">
 
     <div class="intro-flower">🌷</div>
 
@@ -844,8 +816,8 @@ button{
     <p>
       I wanted to make something a little different for your birthday,
       something that feels like us and keeps a few of the little memories
-      that mean so much to me. We have shared so many ordinary moments that
-      somehow became some of my favourite memories. So take your time,
+      that mean so much to me. We have shared so many ordinary moments
+      that somehow became some of my favourite memories. So take your time,
       look around, and enjoy this little piece of my heart made just for you. ♡
     </p>
 
@@ -858,13 +830,15 @@ button{
 </section>
 
 
-<!-- =====================================================
-     4. MEMORIES
-===================================================== -->
+<!-- =====================
+     MEMORIES
+===================== -->
 
 <section id="memories" class="hidden">
 
-  <h2 class="memories-title">The memories we share</h2>
+  <h2 class="memories-title">
+    The memories we share
+  </h2>
 
   <p class="memories-subtitle">
     A few little moments I never want to forget. ♡
@@ -872,75 +846,73 @@ button{
 
   <div class="memory-grid">
 
-    <!-- PHOTO 1 -->
     <div class="memory-card">
+
       <img
+        id="memory1"
         class="memory-photo"
-        src="2a9c0291-d66a-46a7-bd40-6d751050d81c.JPG"
-        alt="A memory"
-        onerror="showPhotoError(this)"
+        alt="Memory 1"
       >
-      <div class="photo-error">
-        Photo couldn't load.
-      </div>
+
       <div class="memory-caption">
         One of our little moments ♡
       </div>
+
     </div>
 
 
-    <!-- PHOTO 2 -->
     <div class="memory-card">
+
       <img
+        id="memory2"
         class="memory-photo"
-        src="IMG_6830.jpg"
-        alt="A memory"
-        onerror="showPhotoError(this)"
+        alt="Memory 2"
       >
-      <div class="photo-error">
-        Photo couldn't load.
-      </div>
+
       <div class="memory-caption">
         A memory worth keeping
       </div>
+
     </div>
 
 
-    <!-- PHOTO 3 — FIXED EXACT FILENAME -->
     <div class="memory-card">
+
       <img
+        id="memory3"
         class="memory-photo"
-        src="3F4401DF-DBB8-4E14-A1D9-EA782CFC29D6.jpeg"
-        alt="A memory"
-        onerror="showPhotoError(this)"
+        alt="Memory 3"
       >
-      <div class="photo-error">
-        Photo couldn't load.
-      </div>
+
       <div class="memory-caption">
         Another little piece of us ♡
       </div>
+
     </div>
 
   </div>
 
-  <button class="main-btn" onclick="showSection('puzzle')" style="margin-top:45px;">
+  <button
+    class="main-btn"
+    onclick="showSection('puzzle')"
+    style="margin-top:45px;"
+  >
     There's more… 🧩
   </button>
 
 </section>
 
 
-<!-- =====================================================
-     5. ROSE PUZZLE
-===================================================== -->
+<!-- =====================
+     PUZZLE
+===================== -->
 
 <section id="puzzle" class="hidden">
 
   <h2>Put us back together 🌹</h2>
 
   <p class="puzzle-subtitle">
-    Tap two pieces to swap them. Finish the little rose puzzle. ♡
+    Tap two pieces to swap them and complete the little rose.
   </p>
 
   <div id="puzzleBoard" class="puzzle-board"></div>
@@ -958,9 +930,9 @@ button{
 </section>
 
 
-<!-- =====================================================
-     6. ENVELOPE
-===================================================== -->
+<!-- =====================
+     ENVELOPE
+===================== -->
 
 <section id="envelope" class="hidden">
 
@@ -991,9 +963,9 @@ button{
 </section>
 
 
-<!-- =====================================================
-     7. HEARTFELT LETTER
-===================================================== -->
+<!-- =====================
+     LETTER
+===================== -->
 
 <section id="letter" class="hidden">
 
@@ -1068,13 +1040,12 @@ button{
         And then there was your first bouquet for me.
         The yellow flowers, the purple flowers whose name I still don't know,
         the pink rose, and the hibiscus. I still remember it because it was
-        the first bouquet of flowers I received from you, and that makes it
-        special in a way that another bouquet could never completely replace.
+        the first bouquet of flowers I received from you, and that makes
+        it special in a way that another bouquet could never completely replace.
       </p>
 
       <p>
-        There is also one very important thing that I absolutely cannot
-        forget…
+        There is also one very important thing that I absolutely cannot forget…
       </p>
 
       <p class="letter-highlight">
@@ -1135,9 +1106,9 @@ button{
 </section>
 
 
-<!-- =====================================================
-     8. JAR OF 10 LOVE NOTES
-===================================================== -->
+<!-- =====================
+     JAR
+===================== -->
 
 <section id="jarSection" class="hidden">
 
@@ -1157,12 +1128,13 @@ button{
       id="jarVisual"
       class="jar"
       onclick="openNote()"
-      aria-label="Open a love note"
     >
+
       <div class="jar-label">
         Little things<br>
         I love about you ♡
       </div>
+
     </div>
 
   </div>
@@ -1182,9 +1154,9 @@ button{
 </section>
 
 
-<!-- =====================================================
-     9. FINAL
-===================================================== -->
+<!-- =====================
+     FINAL
+===================== -->
 
 <section id="final" class="hidden">
 
@@ -1205,18 +1177,13 @@ button{
 </section>
 
 
-<!-- =====================================================
-     AUDIO
-===================================================== -->
-
-<audio id="audioPlayer" loop></audio>
+<audio id="audioPlayer"></audio>
 
 
 <script>
 
 /* =====================================================
-   CENTRAL SECTION LIST
-   Keep this list when adding future sections.
+   SECTIONS
 ===================================================== */
 
 const SECTION_IDS = [
@@ -1231,10 +1198,6 @@ const SECTION_IDS = [
   "final"
 ];
 
-
-/* =====================================================
-   NAVIGATION
-===================================================== */
 
 function showSection(id){
 
@@ -1251,7 +1214,7 @@ function showSection(id){
   const target = document.getElementById(id);
 
   if(!target){
-    console.error("Section not found:", id);
+    console.error("Missing section:",id);
     return;
   }
 
@@ -1261,6 +1224,10 @@ function showSection(id){
     top:0,
     behavior:"smooth"
   });
+
+  if(id === "memories"){
+    loadMemoryPhotos();
+  }
 
   if(id === "puzzle"){
     initPuzzle();
@@ -1273,24 +1240,7 @@ function showSection(id){
   if(id === "final"){
     startFalling();
   }
-}
 
-
-/* =====================================================
-   PHOTO ERROR HANDLER
-===================================================== */
-
-function showPhotoError(image){
-
-  console.error("Could not load image:", image.src);
-
-  image.style.display = "none";
-
-  const errorBox = image.nextElementSibling;
-
-  if(errorBox){
-    errorBox.style.display = "flex";
-  }
 }
 
 
@@ -1302,12 +1252,12 @@ const LOCK_QUESTIONS = [
 
   {
     question:"What nickname do I call you? ♡",
-    answer:["carino"]
+    answers:["carino"]
   },
 
   {
     question:"When is our anniversary? 🌷",
-    answer:[
+    answers:[
       "23 january",
       "23rd january",
       "january 23",
@@ -1320,7 +1270,7 @@ const LOCK_QUESTIONS = [
 
   {
     question:"What's my favourite flower? 🌸",
-    answer:["lily"]
+    answers:["lily"]
   }
 
 ];
@@ -1340,13 +1290,15 @@ function normalizeAnswer(value){
 
 function buildLockQuestions(){
 
-  const container = document.getElementById("lockQuestions");
+  const container =
+    document.getElementById("lockQuestions");
 
   container.innerHTML = "";
 
   LOCK_QUESTIONS.forEach((item,index)=>{
 
-    const wrapper = document.createElement("div");
+    const wrapper =
+      document.createElement("div");
 
     wrapper.className = "question";
 
@@ -1378,20 +1330,24 @@ function checkLock(event){
 
   LOCK_QUESTIONS.forEach((item,index)=>{
 
-    const input = document.getElementById(`answer${index}`);
+    const input =
+      document.getElementById(`answer${index}`);
 
-    const userAnswer = normalizeAnswer(input.value);
+    const userAnswer =
+      normalizeAnswer(input.value);
 
-    const acceptedAnswers = item.answer.map(normalizeAnswer);
+    const accepted =
+      item.answers.map(normalizeAnswer);
 
-    if(!acceptedAnswers.includes(userAnswer)){
+    if(!accepted.includes(userAnswer)){
       correct = false;
     }
 
   });
 
 
-  const error = document.getElementById("lockError");
+  const error =
+    document.getElementById("lockError");
 
   if(correct){
 
@@ -1402,7 +1358,7 @@ function checkLock(event){
   }else{
 
     error.textContent =
-      "Hmm… one of those isn't quite right. Try again, Carino ♡";
+      "Hmm… one answer isn't quite right. Try again ♡";
 
   }
 
@@ -1411,6 +1367,7 @@ function checkLock(event){
 
 /* =====================================================
    SONGS
+   Multiple possible filenames are tried automatically.
 ===================================================== */
 
 const SONGS = [
@@ -1418,49 +1375,67 @@ const SONGS = [
   {
     title:"I Thought I Saw Your Face Today",
     artist:"She & Him",
-    file:"AUDIO-2026-09-05-14-00-58.mp3"
+    files:[
+      "AUDIO-2026-09-05-14-00-58.mp3"
+    ]
   },
 
   {
     title:"The Way I Loved You",
     artist:"Taylor Swift",
-    file:"AUDIO-2026-09-05-14-01-16(1).mp3"
+    files:[
+      "AUDIO-2026-09-05-14-01-16(1).mp3",
+      "AUDIO-2026-09-05-14-01-16.mp3"
+    ]
   },
 
   {
     title:"Can't Help Falling in Love",
     artist:"Elvis Presley",
-    file:"AUDIO-2026-09-05-14-01-33.mp3"
+    files:[
+      "AUDIO-2026-09-05-14-01-33.mp3"
+    ]
   }
 
 ];
 
 
-const audioPlayer = document.getElementById("audioPlayer");
+const audioPlayer =
+  document.getElementById("audioPlayer");
 
 
 function buildSongList(){
 
-  const list = document.getElementById("songList");
+  const list =
+    document.getElementById("songList");
 
   list.innerHTML = "";
 
   SONGS.forEach((song,index)=>{
 
-    const button = document.createElement("button");
+    const button =
+      document.createElement("button");
 
     button.className = "song-button";
 
     button.innerHTML = `
-      <div class="song-number">${index + 1}</div>
+      <div class="song-number">
+        ${index + 1}
+      </div>
 
       <div>
-        <div class="song-title">${song.title}</div>
-        <div class="song-artist">${song.artist}</div>
+        <div class="song-title">
+          ${song.title}
+        </div>
+
+        <div class="song-artist">
+          ${song.artist}
+        </div>
       </div>
     `;
 
-    button.onclick = () => selectSong(index);
+    button.onclick = () =>
+      selectSong(index);
 
     list.appendChild(button);
 
@@ -1469,19 +1444,179 @@ function buildSongList(){
 }
 
 
+function tryAudioFiles(files,index){
+
+  if(index >= files.length){
+
+    document.getElementById("audioError").textContent =
+      "This song file could not be found. Check that the MP3 is in the same folder as index.html.";
+
+    return;
+
+  }
+
+
+  const file = files[index];
+
+  audioPlayer.src = file;
+
+  audioPlayer.load();
+
+
+  audioPlayer.play()
+    .then(()=>{
+
+      document.getElementById("audioError").textContent = "";
+
+      showSection("intro");
+
+    })
+    .catch(()=>{
+
+      /*
+       If the first filename doesn't work,
+       try the next filename.
+      */
+
+      tryAudioFiles(files,index + 1);
+
+    });
+
+}
+
+
 function selectSong(index){
 
   const song = SONGS[index];
 
-  audioPlayer.src = song.file;
-  audioPlayer.loop = true;
+  document.getElementById("audioError").textContent =
+    "Loading music… ♡";
 
-  audioPlayer.play()
-    .catch(error => {
-      console.log("Audio needs user interaction:",error);
-    });
+  tryAudioFiles(song.files,0);
 
-  showSection("intro");
+}
+
+
+/* =====================================================
+   MEMORY PHOTOS
+   The third photo automatically tries several extensions.
+===================================================== */
+
+const MEMORY_PHOTOS = [
+
+  {
+    id:"memory1",
+    files:[
+      "2a9c0291-d66a-46a7-bd40-6d751050d81c.JPG",
+      "2a9c0291-d66a-46a7-bd40-6d751050d81c.jpg",
+      "2a9c0291-d66a-46a7-bd40-6d751050d81c.jpeg"
+    ]
+  },
+
+  {
+    id:"memory2",
+    files:[
+      "IMG_6830.jpg",
+      "IMG_6830.JPG",
+      "IMG_6830.jpeg"
+    ]
+  },
+
+  {
+    id:"memory3",
+    files:[
+      "ING_7259.jpeg",
+      "ING_7259.jpg",
+      "ING_7259.JPG",
+      "ING_7259.png",
+      "IMG_7259.jpeg",
+      "IMG_7259.jpg",
+      "IMG_7259.JPG",
+      "IMG_7259.png"
+    ]
+  }
+
+];
+
+
+function tryMemoryFile(image,files,index){
+
+  if(index >= files.length){
+
+    image.alt =
+      "Photo could not be loaded";
+
+    image.style.display = "block";
+
+    image.style.objectFit = "contain";
+
+    image.style.padding = "30px";
+
+    image.style.background = "#f8eeee";
+
+    console.error(
+      "Could not find photo. Tried:",
+      files
+    );
+
+    return;
+
+  }
+
+
+  const candidate = files[index];
+
+  const testImage =
+    new Image();
+
+
+  testImage.onload = function(){
+
+    image.src = candidate;
+
+  };
+
+
+  testImage.onerror = function(){
+
+    tryMemoryFile(
+      image,
+      files,
+      index + 1
+    );
+
+  };
+
+
+  testImage.src = candidate;
+
+}
+
+
+function loadMemoryPhotos(){
+
+  MEMORY_PHOTOS.forEach(photo=>{
+
+    const image =
+      document.getElementById(photo.id);
+
+    if(!image){
+      return;
+    }
+
+    if(image.dataset.loaded === "true"){
+      return;
+    }
+
+    image.dataset.loaded = "true";
+
+    tryMemoryFile(
+      image,
+      photo.files,
+      0
+    );
+
+  });
 
 }
 
@@ -1490,39 +1625,91 @@ function selectSong(index){
    PUZZLE
 ===================================================== */
 
-const PUZZLE_IMAGE =
-  "45B4C78E-F6F0-4160-8CBE-3E776BBA2E0C.jpeg";
+const PUZZLE_FILES = [
+
+  "4E3284AD-7CD5-4636-8252-52D290138EC4.jpeg",
+  "4E3284AD-7CD5-4636-8252-52D290138EC4.jpg",
+  "4E3284AD-7CD5-4636-8252-52D290138EC4.JPG",
+  "4E3284AD-7CD5-4636-8252-52D290138EC4.png",
+  "45B4C78E-F6F0-4160-8CBE-3E776BBA2E0C.jpeg",
+  "45B4C78E-F6F0-4160-8CBE-3E776BBA2E0C.jpg"
+];
+
+
+let puzzleImageURL = null;
 
 let puzzleOrder = [];
+
 let selectedPiece = null;
+
 let puzzleStarted = false;
 
 
-function shuffleArray(array){
+function findPuzzleImage(files,index){
 
-  const copy = [...array];
+  if(index >= files.length){
 
-  for(let i=copy.length-1;i>0;i--){
+    console.error(
+      "Puzzle image could not be found."
+    );
 
-    const j = Math.floor(Math.random()*(i+1));
+    document.getElementById("puzzleMessage").textContent =
+      "The puzzle image could not be found. Please check its filename in GitHub.";
 
-    [copy[i],copy[j]] = [copy[j],copy[i]];
+    return;
 
   }
 
-  return copy;
+
+  const test =
+    new Image();
+
+
+  test.onload = function(){
+
+    puzzleImageURL =
+      files[index];
+
+    initPuzzle();
+
+  };
+
+
+  test.onerror = function(){
+
+    findPuzzleImage(files,index + 1);
+
+  };
+
+
+  test.src = files[index];
+
 }
 
 
 function initPuzzle(){
 
+  if(!puzzleImageURL){
+
+    findPuzzleImage(
+      PUZZLE_FILES,
+      0
+    );
+
+    return;
+
+  }
+
+
   if(puzzleStarted){
     return;
   }
 
+
   puzzleStarted = true;
 
-  puzzleOrder = shuffleArray([0,1,2,3,4,5]);
+  puzzleOrder =
+    shuffleArray([0,1,2,3,4,5]);
 
   renderPuzzle();
 
@@ -1531,28 +1718,43 @@ function initPuzzle(){
 
 function renderPuzzle(){
 
-  const board = document.getElementById("puzzleBoard");
+  const board =
+    document.getElementById("puzzleBoard");
 
   board.innerHTML = "";
 
+
   puzzleOrder.forEach((pieceIndex,position)=>{
 
-    const piece = document.createElement("div");
+    const piece =
+      document.createElement("div");
 
-    piece.className = "puzzle-piece";
+    piece.className =
+      "puzzle-piece";
 
-    const column = pieceIndex % 3;
-    const row = Math.floor(pieceIndex / 3);
+
+    const column =
+      pieceIndex % 3;
+
+    const row =
+      Math.floor(pieceIndex / 3);
+
 
     piece.style.backgroundImage =
-      `url("${PUZZLE_IMAGE}")`;
+      `url("${puzzleImageURL}")`;
+
+
+    piece.style.backgroundSize =
+      "300% 200%";
+
 
     piece.style.backgroundPosition =
       `${column * 50}% ${row * 100}%`;
 
-    piece.dataset.position = position;
 
-    piece.onclick = () => selectPuzzlePiece(position,piece);
+    piece.onclick = () =>
+      selectPuzzlePiece(position,piece);
+
 
     board.appendChild(piece);
 
@@ -1570,6 +1772,7 @@ function selectPuzzlePiece(position,element){
     element.classList.add("selected");
 
     return;
+
   }
 
 
@@ -1580,6 +1783,7 @@ function selectPuzzlePiece(position,element){
     selectedPiece = null;
 
     return;
+
   }
 
 
@@ -1606,11 +1810,14 @@ function checkPuzzle(){
 
   const solved =
     puzzleOrder.every(
-      (value,index) => value === index
+      (value,index) =>
+        value === index
     );
+
 
   const message =
     document.getElementById("puzzleMessage");
+
 
   const continueButton =
     document.getElementById("puzzleContinue");
@@ -1634,6 +1841,35 @@ function checkPuzzle(){
 
 
 /* =====================================================
+   SHUFFLE
+===================================================== */
+
+function shuffleArray(array){
+
+  const copy = [...array];
+
+  for(let i=copy.length-1;i>0;i--){
+
+    const j =
+      Math.floor(Math.random()*(i+1));
+
+    [
+      copy[i],
+      copy[j]
+    ] =
+    [
+      copy[j],
+      copy[i]
+    ];
+
+  }
+
+  return copy;
+
+}
+
+
+/* =====================================================
    ENVELOPE
 ===================================================== */
 
@@ -1648,10 +1884,10 @@ function openEnvelope(){
 
   envelopeOpened = true;
 
-  const envelope =
-    document.getElementById("envelopeBox");
+  document
+    .getElementById("envelopeBox")
+    .classList.add("open");
 
-  envelope.classList.add("open");
 
   setTimeout(()=>{
 
@@ -1692,14 +1928,19 @@ const NOTES = [
 
 
 let notePool = [];
+
 let openedNotes = 0;
 
 
 function prepareJar(){
 
-  if(openedNotes === 0 && notePool.length === 0){
+  if(
+    openedNotes === 0 &&
+    notePool.length === 0
+  ){
 
-    notePool = shuffleArray(NOTES);
+    notePool =
+      shuffleArray(NOTES);
 
   }
 
@@ -1713,8 +1954,10 @@ function updateRemaining(){
   const remaining =
     NOTES.length - openedNotes;
 
+
   const element =
     document.getElementById("remaining");
+
 
   if(remaining > 0){
 
@@ -1735,33 +1978,53 @@ function openNote(){
 
   if(notePool.length === 0){
 
-    document.getElementById("noteMessage").textContent =
+    document
+      .getElementById("noteMessage")
+      .textContent =
       "You found every little note. ♡";
 
-    document.getElementById("finishButton").style.display =
+
+    document
+      .getElementById("finishButton")
+      .style.display =
       "inline-block";
 
+
     return;
+
   }
 
 
-  const note = notePool.pop();
+  const note =
+    notePool.pop();
+
 
   openedNotes++;
+
 
   const message =
     document.getElementById("noteMessage");
 
+
   message.innerHTML = "";
+
 
   const noteElement =
     document.createElement("div");
 
-  noteElement.className = "paper-note";
 
-  noteElement.textContent = note;
+  noteElement.className =
+    "paper-note";
 
-  message.appendChild(noteElement);
+
+  noteElement.textContent =
+    note;
+
+
+  message.appendChild(
+    noteElement
+  );
+
 
   updateRemaining();
 
@@ -1770,7 +2033,9 @@ function openNote(){
 
     setTimeout(()=>{
 
-      document.getElementById("finishButton").style.display =
+      document
+        .getElementById("finishButton")
+        .style.display =
         "inline-block";
 
     },500);
@@ -1781,7 +2046,7 @@ function openNote(){
 
 
 /* =====================================================
-   FINAL FALLING DECORATIONS
+   FINAL
 ===================================================== */
 
 let fallingStarted = false;
@@ -1795,8 +2060,10 @@ function startFalling(){
 
   fallingStarted = true;
 
+
   const container =
     document.getElementById("falling");
+
 
   const symbols = [
     "🌸",
@@ -1816,22 +2083,34 @@ function startFalling(){
     const item =
       document.createElement("div");
 
-    item.className = "falling-item";
+
+    item.className =
+      "falling-item";
+
 
     item.textContent =
-      symbols[Math.floor(Math.random()*symbols.length)];
+      symbols[
+        Math.floor(
+          Math.random()*symbols.length
+        )
+      ];
+
 
     item.style.left =
       Math.random()*100 + "%";
 
+
     item.style.animationDuration =
       (7 + Math.random()*9) + "s";
+
 
     item.style.animationDelay =
       Math.random()*6 + "s";
 
+
     item.style.fontSize =
       (1 + Math.random()*1.2) + "rem";
+
 
     container.appendChild(item);
 
@@ -1841,20 +2120,26 @@ function startFalling(){
 
 
 /* =====================================================
-   STARTUP
+   START
 ===================================================== */
 
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener(
+  "DOMContentLoaded",
+  ()=>{
 
-  buildLockQuestions();
+    buildLockQuestions();
 
-  buildSongList();
+    buildSongList();
 
-  document
-    .getElementById("lockForm")
-    .addEventListener("submit",checkLock);
+    document
+      .getElementById("lockForm")
+      .addEventListener(
+        "submit",
+        checkLock
+      );
 
-});
+  }
+);
 
 </script>
 

@@ -3,1905 +3,1856 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#f8e8e8">
-<title>For Carino ♡</title>
+<title>Carino ♡</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
-/* =========================================================
-   BASIC RESET
-========================================================= */
-
 *{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 html{
-    scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-    min-height:100vh;
-    font-family:"DM Sans",sans-serif;
-    color:#4b3437;
-    background:#f8eeee;
-    overflow-x:hidden;
-}
-
-button,
-input{
-    font:inherit;
-}
-
-button{
-    cursor:pointer;
-}
-
-/* =========================================================
-   GENERAL SCREEN SYSTEM
-========================================================= */
-
-.screen{
-    min-height:100vh;
-    width:100%;
-    padding:45px 20px 70px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
+  min-height:100vh;
+  background:#fff8f1;
+  color:#4d3940;
+  font-family:'Quicksand',sans-serif;
+  overflow-x:hidden;
 }
 
 .hidden{
-    display:none !important;
+  display:none !important;
 }
 
-.content{
-    width:100%;
-    max-width:760px;
-    margin:auto;
-    text-align:center;
+section{
+  min-height:100vh;
+  width:100%;
+  padding:50px 20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  position:relative;
 }
 
-h1,
-h2,
-h3{
-    font-family:"Cormorant Garamond",serif;
+/* =========================
+   GENERAL
+========================= */
+
+.card{
+  width:min(92%,700px);
+  background:rgba(255,255,255,.82);
+  border:1px solid rgba(150,110,110,.18);
+  border-radius:25px;
+  padding:35px 25px;
+  box-shadow:0 15px 40px rgba(91,55,60,.08);
+}
+
+h1,h2,h3{
+  font-family:'Cormorant Garamond',serif;
+  color:#633f48;
 }
 
 h1{
-    font-size:clamp(3rem,11vw,6rem);
-    font-weight:600;
-    line-height:0.95;
+  font-size:clamp(3rem,10vw,5.8rem);
+  line-height:1;
 }
 
 h2{
-    font-size:clamp(2.4rem,8vw,4.5rem);
-    font-weight:600;
+  font-size:clamp(2.2rem,8vw,4rem);
+  margin-bottom:20px;
 }
 
 p{
-    line-height:1.8;
+  line-height:1.8;
 }
 
-.small{
-    font-size:.9rem;
-    opacity:.7;
+button{
+  border:none;
+  cursor:pointer;
+  font-family:'Quicksand',sans-serif;
 }
 
-.primary-btn{
-    border:0;
-    padding:14px 25px;
-    border-radius:999px;
-    background:#7e4c58;
-    color:white;
-    box-shadow:0 8px 20px rgba(80,45,55,.15);
-    transition:.25s ease;
-}
-
-.primary-btn:hover{
-    transform:translateY(-2px);
-}
-
-.primary-btn:active{
-    transform:scale(.97);
-}
-
-/* =========================================================
-   LOCK SCREEN
-========================================================= */
+/* =========================
+   LOCK
+========================= */
 
 #lock{
-    background:
-        radial-gradient(circle at 20% 20%,rgba(255,255,255,.8),transparent 28%),
-        radial-gradient(circle at 80% 80%,rgba(237,199,207,.5),transparent 30%),
-        #f8eeee;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(255,205,218,.45),transparent 30%),
+    radial-gradient(circle at 80% 80%,rgba(255,224,188,.4),transparent 30%),
+    #fff8f1;
 }
 
-.lock-card{
-    width:100%;
-    max-width:650px;
-    background:rgba(255,255,255,.72);
-    padding:38px 25px;
-    border-radius:28px;
-    box-shadow:0 20px 60px rgba(80,45,55,.1);
-    backdrop-filter:blur(8px);
+.lock-box{
+  width:min(92%,520px);
+  text-align:center;
 }
 
-.lock-flower{
-    font-size:3rem;
-    margin-bottom:12px;
+.lock-icon{
+  font-size:4rem;
+  margin-bottom:10px;
 }
 
-.lock-card h1{
-    font-size:clamp(2.5rem,9vw,4.5rem);
-    margin-bottom:10px;
+.lock-box h1{
+  margin-bottom:12px;
 }
 
 .lock-subtitle{
-    margin-bottom:30px;
-    opacity:.7;
-}
-
-.question-box{
-    text-align:left;
+  margin-bottom:30px;
+  color:#8a6c73;
 }
 
 .question{
-    margin-bottom:20px;
+  text-align:left;
+  margin-bottom:20px;
 }
 
 .question label{
-    display:block;
-    margin-bottom:8px;
-    font-family:"Cormorant Garamond",serif;
-    font-size:1.35rem;
-    font-weight:600;
+  display:block;
+  margin-bottom:8px;
+  font-weight:600;
+  color:#634850;
 }
 
 .question input{
-    width:100%;
-    padding:14px 16px;
-    border:1px solid #dbc4c8;
-    border-radius:14px;
-    outline:none;
-    background:#fffafa;
-    color:#4b3437;
+  width:100%;
+  padding:15px 17px;
+  border:1px solid #dec9cd;
+  border-radius:15px;
+  background:#fff;
+  font-size:1rem;
+  outline:none;
+  font-family:'Quicksand',sans-serif;
 }
 
 .question input:focus{
-    border-color:#a66d78;
-    box-shadow:0 0 0 3px rgba(166,109,120,.1);
+  border-color:#b98591;
+  box-shadow:0 0 0 3px rgba(185,133,145,.12);
 }
 
-.lock-error{
-    min-height:25px;
-    margin:15px 0;
-    color:#a34f60;
-    font-size:.9rem;
+.main-btn{
+  margin-top:10px;
+  padding:14px 28px;
+  border-radius:30px;
+  background:#9d6875;
+  color:white;
+  font-size:1rem;
+  font-weight:700;
+  box-shadow:0 8px 20px rgba(157,104,117,.25);
+  transition:.2s;
 }
 
-/* =========================================================
-   SONG SCREEN
-========================================================= */
+.main-btn:hover{
+  transform:translateY(-2px);
+}
+
+.error{
+  min-height:24px;
+  margin-top:15px;
+  color:#b54e63;
+  font-size:.92rem;
+}
+
+/* =========================
+   SONGS
+========================= */
 
 #songs{
-    background:#f7eded;
+  background:#fff4f0;
 }
 
 .song-intro{
-    margin:15px auto 30px;
-    max-width:560px;
-    opacity:.75;
+  text-align:center;
+  margin-bottom:28px;
 }
 
 .song-list{
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-    margin:30px auto;
-    max-width:600px;
+  width:min(92%,620px);
+  display:flex;
+  flex-direction:column;
+  gap:15px;
 }
 
-.song{
-    display:flex;
-    align-items:center;
-    gap:16px;
-    text-align:left;
-    padding:18px;
-    border-radius:20px;
-    background:rgba(255,255,255,.75);
-    border:1px solid rgba(130,80,90,.1);
-    transition:.25s ease;
-    box-shadow:0 8px 25px rgba(70,40,50,.06);
+.song-button{
+  background:white;
+  border:1px solid #ead7d7;
+  border-radius:20px;
+  padding:20px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  text-align:left;
+  transition:.25s;
+  box-shadow:0 7px 20px rgba(100,60,70,.06);
 }
 
-.song:hover{
-    transform:translateY(-2px);
-    box-shadow:0 12px 30px rgba(70,40,50,.1);
+.song-button:hover{
+  transform:translateY(-3px);
+  border-color:#c999a2;
 }
 
-.disc{
-    width:48px;
-    height:48px;
-    min-width:48px;
-    border-radius:50%;
-    background:
-        radial-gradient(circle,#f7eeee 0 10%,transparent 11% 25%,#a66d78 26% 29%,transparent 30%),
-        #d7a9b2;
+.song-number{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:#f3d9dd;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
 }
 
-.song b{
-    display:block;
-    margin-bottom:3px;
+.song-title{
+  font-weight:700;
+  color:#5d4149;
 }
 
-.song span{
-    font-size:.85rem;
-    opacity:.65;
+.song-artist{
+  font-size:.88rem;
+  color:#92747b;
+  margin-top:3px;
 }
 
-/* =========================================================
+/* =========================
    INTRO
-========================================================= */
+========================= */
 
 #intro{
-    background:#f9eeee;
+  background:#fff9f4;
+  text-align:center;
 }
 
 .intro-card{
-    max-width:700px;
-    background:#fffaf8;
-    border-radius:30px;
-    padding:45px 28px;
-    box-shadow:0 20px 55px rgba(70,40,50,.08);
+  max-width:720px;
 }
 
-.intro-card h2{
-    margin-bottom:25px;
+.intro-flower{
+  font-size:3rem;
+  margin-bottom:15px;
 }
 
 .intro-card p{
-    font-size:1.05rem;
-    line-height:2;
+  font-size:1.08rem;
+  color:#725961;
 }
 
-/* =========================================================
+/* =========================
    MEMORIES
-========================================================= */
+========================= */
 
 #memories{
-    background:#f5e8e7;
+  background:
+    radial-gradient(circle at 10% 20%,rgba(255,214,225,.35),transparent 25%),
+    #fffaf5;
+  justify-content:flex-start;
+  padding-top:70px;
 }
 
 .memories-title{
-    margin-bottom:12px;
+  text-align:center;
+  margin-bottom:12px;
 }
 
 .memories-subtitle{
-    margin-bottom:35px;
-    opacity:.7;
+  text-align:center;
+  color:#95777d;
+  margin-bottom:35px;
 }
 
 .memory-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:14px;
-    margin-bottom:35px;
+  width:min(95%,900px);
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.memory-card{
+  background:#fff;
+  padding:12px 12px 18px;
+  border-radius:8px;
+  box-shadow:0 10px 25px rgba(74,45,50,.12);
+  transform:rotate(-1deg);
+  transition:.3s;
+}
+
+.memory-card:nth-child(2){
+  transform:rotate(1.5deg);
+}
+
+.memory-card:nth-child(3){
+  transform:rotate(-.5deg);
+}
+
+.memory-card:hover{
+  transform:translateY(-5px) rotate(0);
 }
 
 .memory-photo{
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  display:block;
+  border-radius:3px;
+  background:#f7eeee;
+}
+
+.memory-caption{
+  text-align:center;
+  padding-top:12px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.25rem;
+  color:#68464e;
+}
+
+.photo-error{
+  display:none;
+  aspect-ratio:4/5;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:#f8eeee;
+  color:#9a777e;
+  padding:15px;
+  font-size:.85rem;
+}
+
+/* Mobile memories */
+
+@media(max-width:700px){
+  .memory-grid{
+    grid-template-columns:1fr;
+    width:min(88%,420px);
+  }
+
+  .memory-card{
+    max-width:360px;
     width:100%;
-    aspect-ratio:3/4;
-    object-fit:cover;
-    border-radius:18px;
-    box-shadow:0 10px 25px rgba(70,40,50,.12);
+    margin:auto;
+  }
 }
 
-@media(max-width:600px){
-    .memory-grid{
-        grid-template-columns:1fr;
-        max-width:420px;
-        margin-left:auto;
-        margin-right:auto;
-    }
-
-    .memory-photo{
-        aspect-ratio:4/5;
-    }
-}
-
-/* =========================================================
+/* =========================
    PUZZLE
-========================================================= */
+========================= */
 
 #puzzle{
-    background:#f8ece9;
+  background:#fff6f2;
+  text-align:center;
 }
 
-.puzzle-description{
-    margin:12px auto 25px;
-    opacity:.7;
+.puzzle-subtitle{
+  max-width:500px;
+  color:#92757b;
+  margin-bottom:25px;
 }
 
 .puzzle-board{
-    width:min(92vw,520px);
-    aspect-ratio:2/3;
-    margin:25px auto;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    grid-template-rows:repeat(2,1fr);
-    gap:3px;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 18px 45px rgba(70,40,50,.15);
-    background:#fff;
+  width:min(90vw,480px);
+  aspect-ratio:3/2;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-template-rows:repeat(2,1fr);
+  gap:4px;
+  background:#fff;
+  padding:4px;
+  border-radius:18px;
+  box-shadow:0 15px 35px rgba(80,45,55,.13);
+  overflow:hidden;
 }
 
 .puzzle-piece{
-    border:0;
-    padding:0;
-    margin:0;
-    background-repeat:no-repeat;
-    background-size:300% 200%;
-    background-color:#eee;
-    transition:.2s ease;
+  background-image:url("45B4C78E-F6F0-4160-8CBE-3E776BBA2E0C.jpeg");
+  background-size:300% 200%;
+  border-radius:5px;
+  cursor:pointer;
+  transition:.2s;
 }
 
 .puzzle-piece.selected{
-    transform:scale(.96);
-    box-shadow:inset 0 0 0 4px rgba(255,255,255,.9);
+  transform:scale(.94);
+  box-shadow:0 0 0 3px #b47784 inset;
 }
 
 .puzzle-message{
-    min-height:35px;
-    margin:18px 0;
-    font-family:"Cormorant Garamond",serif;
-    font-size:1.4rem;
+  min-height:30px;
+  margin-top:18px;
+  color:#86656d;
 }
 
-/* =========================================================
+/* =========================
    ENVELOPE
-========================================================= */
+========================= */
 
 #envelope{
-    background:#f8e8e8;
+  background:#fff9f3;
+  text-align:center;
 }
 
-.envelope-area{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+.envelope-wrap{
+  width:min(90vw,500px);
+  cursor:pointer;
 }
 
 .envelope{
-    position:relative;
-    width:min(88vw,430px);
-    height:280px;
-    margin:35px auto;
-    cursor:pointer;
-    perspective:800px;
+  position:relative;
+  width:100%;
+  aspect-ratio:1.55/1;
+  background:#e9bfc5;
+  border-radius:10px;
+  box-shadow:0 20px 40px rgba(80,45,50,.15);
+  overflow:hidden;
 }
 
-.envelope-body{
-    position:absolute;
-    inset:0;
-    background:#d9aeb4;
-    border-radius:8px;
-    box-shadow:0 20px 40px rgba(70,40,50,.16);
-    overflow:hidden;
+.envelope-back{
+  position:absolute;
+  inset:0;
+  background:#e7bbc2;
 }
 
-.envelope-body::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:
-        linear-gradient(145deg,transparent 49%,#c7959d 50%,transparent 51%),
-        linear-gradient(215deg,transparent 49%,#c7959d 50%,transparent 51%);
+.envelope-letter{
+  position:absolute;
+  left:8%;
+  bottom:5%;
+  width:84%;
+  height:82%;
+  background:#fffdf9;
+  transition:1s;
+  border-radius:4px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.4rem;
+  color:#7a515b;
+  z-index:2;
 }
 
 .envelope-flap{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:55%;
-    background:#e7c0c5;
-    clip-path:polygon(0 0,100% 0,50% 100%);
-    transform-origin:top center;
-    transition:transform .8s ease;
-    z-index:4;
+  position:absolute;
+  left:0;
+  top:0;
+  width:0;
+  height:0;
+  border-left:50% solid transparent;
+  border-right:50% solid transparent;
+  border-top:48% solid #dbaab3;
+  z-index:4;
+  transform-origin:top;
+  transition:1s;
 }
 
-.letter-peek{
-    position:absolute;
-    width:82%;
-    height:80%;
-    left:9%;
-    top:7%;
-    background:#fffaf3;
-    border-radius:5px;
-    z-index:2;
-    padding:25px;
-    font-family:"Cormorant Garamond",serif;
-    font-size:1.3rem;
-    transition:transform .9s ease;
-    box-shadow:0 5px 15px rgba(60,40,40,.08);
+.envelope-front{
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:0;
+  height:0;
+  border-left:50% solid transparent;
+  border-right:50% solid transparent;
+  border-bottom:50% solid #d4a1ab;
+  z-index:3;
 }
 
 .envelope.open .envelope-flap{
-    transform:rotateX(180deg);
+  transform:rotateX(180deg);
 }
 
-.envelope.open .letter-peek{
-    transform:translateY(-45%);
+.envelope.open .envelope-letter{
+  transform:translateY(-35%);
 }
 
-.envelope-caption{
-    font-family:"Cormorant Garamond",serif;
-    font-size:1.4rem;
+.envelope-hint{
+  margin-top:25px;
+  color:#8c6c73;
 }
 
-/* =========================================================
-   LETTER / NOTEBOOK
-========================================================= */
+/* =========================
+   LETTER
+========================= */
 
 #letter{
-    background:#eadbd0;
-    align-items:flex-start;
+  min-height:auto;
+  justify-content:flex-start;
+  padding-top:65px;
+  padding-bottom:80px;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      #fffdf7 0px,
+      #fffdf7 31px,
+      #eadde0 32px
+    );
 }
 
-.notebook{
-    position:relative;
-    width:100%;
-    max-width:760px;
-    background:
-        repeating-linear-gradient(
-            to bottom,
-            #fffdf7 0,
-            #fffdf7 31px,
-            #eadfe0 32px
-        );
-    padding:55px 35px 65px 55px;
-    border-radius:8px;
-    box-shadow:0 20px 55px rgba(70,40,50,.16);
-    text-align:left;
+.letter-paper{
+  width:min(92%,760px);
+  padding:45px 35px 65px;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,.96) 0px,
+      rgba(255,255,255,.96) 31px,
+      rgba(220,198,201,.65) 32px
+    );
+  box-shadow:0 12px 35px rgba(75,50,55,.10);
+  border-radius:5px;
+  position:relative;
 }
 
-.notebook::before{
-    content:"";
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:38px;
-    width:1px;
-    background:#e3aeb6;
+.letter-paper:before{
+  content:"";
+  position:absolute;
+  left:55px;
+  top:0;
+  bottom:0;
+  width:1px;
+  background:rgba(205,130,145,.35);
 }
 
-.notebook-header{
-    text-align:center;
-    margin-bottom:35px;
-    position:relative;
+.letter-content{
+  position:relative;
+  z-index:1;
+  padding-left:35px;
 }
 
-.notebook-header h2{
-    font-size:clamp(2.4rem,8vw,4rem);
+.letter-content h2{
+  text-align:center;
+  margin-bottom:35px;
 }
 
-.letter-text{
-    position:relative;
-    font-family:"Cormorant Garamond",serif;
-    font-size:1.3rem;
-    line-height:2.05;
+.letter-content p{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.3rem;
+  line-height:1.85;
+  color:#5c454b;
+  margin-bottom:28px;
 }
 
-.letter-text p{
-    margin-bottom:27px;
+.letter-highlight{
+  text-align:center;
+  font-size:1.45rem !important;
+  color:#87545f !important;
 }
 
-.special-memory{
-    margin:30px 0;
-    padding:22px;
-    background:rgba(255,235,238,.65);
-    border-left:4px solid #c88896;
-    border-radius:8px;
+.signature{
+  text-align:right;
+  font-style:italic;
+  margin-top:40px;
 }
 
-.cheesecake{
-    font-size:1.2rem;
+@media(max-width:600px){
+  .letter-paper{
+    padding:35px 20px 55px;
+  }
+
+  .letter-paper:before{
+    left:32px;
+  }
+
+  .letter-content{
+    padding-left:22px;
+  }
+
+  .letter-content p{
+    font-size:1.18rem;
+  }
 }
 
-.letter-end{
-    text-align:center;
-    margin-top:40px;
-    font-size:1.5rem;
-}
-
-/* =========================================================
+/* =========================
    JAR
-========================================================= */
+========================= */
 
 #jarSection{
-    background:#f7e9e6;
-}
-
-.jar-heading{
-    margin-bottom:8px;
+  background:#fff8f1;
+  text-align:center;
 }
 
 .jar-subtitle{
-    opacity:.7;
-    margin-bottom:8px;
+  color:#92747a;
+  margin-bottom:8px;
 }
 
 .remaining{
-    font-family:"Cormorant Garamond",serif;
-    font-size:1.3rem;
-    margin-bottom:30px;
+  font-weight:700;
+  color:#9b6672;
+  margin-bottom:25px;
 }
 
-.jar-wrap{
-    display:flex;
-    justify-content:center;
-    margin:20px 0 30px;
+.jar-area{
+  position:relative;
+  width:270px;
+  height:350px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  margin-bottom:20px;
 }
 
 .jar{
-    position:relative;
-    width:210px;
-    height:260px;
-    border:6px solid rgba(160,120,130,.55);
-    border-top:0;
-    border-radius:0 0 45px 45px;
-    background:rgba(255,255,255,.28);
-    box-shadow:
-        inset 0 0 25px rgba(255,255,255,.65),
-        0 20px 45px rgba(70,40,50,.12);
-    cursor:pointer;
-    transition:.25s ease;
+  width:210px;
+  height:260px;
+  border:4px solid rgba(160,125,130,.45);
+  border-radius:30px 30px 55px 55px;
+  background:rgba(255,255,255,.34);
+  box-shadow:
+    inset 0 0 25px rgba(255,255,255,.8),
+    0 15px 35px rgba(75,50,55,.12);
+  position:relative;
+  cursor:pointer;
 }
 
-.jar:hover{
-    transform:translateY(-5px);
+.jar:before{
+  content:"";
+  position:absolute;
+  top:-25px;
+  left:15px;
+  width:172px;
+  height:35px;
+  border-radius:8px;
+  background:#c99aa3;
+  border:3px solid #ad7b85;
 }
 
-.jar::before{
-    content:"";
-    position:absolute;
-    left:-6px;
-    top:-22px;
-    width:210px;
-    height:27px;
-    border:6px solid rgba(160,120,130,.55);
-    border-radius:8px;
-    background:rgba(255,255,255,.35);
+.jar-label{
+  position:absolute;
+  top:100px;
+  left:50%;
+  transform:translateX(-50%);
+  width:135px;
+  padding:12px;
+  background:#fff4dd;
+  border:1px solid #e0cfa9;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.25rem;
+  color:#76565d;
+  transform-origin:center;
+  rotate:-3deg;
 }
 
-.jar::after{
-    content:"♡";
-    position:absolute;
-    inset:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:4rem;
-    color:rgba(170,100,120,.3);
+.paper-note{
+  position:absolute;
+  width:145px;
+  min-height:105px;
+  padding:15px;
+  background:#fff8c9;
+  box-shadow:0 8px 20px rgba(80,55,40,.12);
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem;
+  line-height:1.4;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  animation:notePop .45s ease;
+  z-index:10;
 }
 
-.jar-note{
-    min-height:130px;
-    margin:25px auto;
-    max-width:600px;
-    padding:25px;
-    background:#fffaf5;
-    border-radius:20px;
-    box-shadow:0 12px 35px rgba(70,40,50,.08);
-    font-family:"Cormorant Garamond",serif;
-    font-size:1.45rem;
-    line-height:1.7;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+@keyframes notePop{
+  from{
+    opacity:0;
+    transform:translateY(30px) scale(.8) rotate(-5deg);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0) scale(1) rotate(0);
+  }
 }
 
-.jar-note:empty{
-    display:none;
+.note-message{
+  min-height:110px;
+  width:min(90%,500px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;
+  color:#6d4b54;
+  padding:20px;
 }
 
-.jar-done{
-    margin:20px 0;
-    font-family:"Cormorant Garamond",serif;
-    font-size:1.5rem;
+.finish-btn{
+  display:none;
 }
 
-/* =========================================================
-   FINAL SCREEN
-========================================================= */
+/* =========================
+   FINAL
+========================= */
 
 #final{
-    background:#fffaf7;
-    overflow:hidden;
+  overflow:hidden;
+  background:#fffaf4;
+  text-align:center;
+  min-height:100vh;
 }
 
 .final-content{
-    position:relative;
-    z-index:5;
+  position:relative;
+  z-index:5;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
 .final-title{
-    opacity:0;
-    animation:finalTitle 3s ease forwards;
-    animation-delay:.7s;
+  opacity:0;
+  transform:translateY(25px);
+  animation:finalAppear 3s ease forwards;
+  animation-delay:.7s;
 }
 
 .final-subtitle{
-    margin-top:30px;
-    font-family:"Cormorant Garamond",serif;
-    font-size:clamp(1.4rem,5vw,2.3rem);
-    opacity:0;
-    animation:finalSubtitle 3s ease forwards;
-    animation-delay:2.7s;
+  margin-top:20px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.4rem,5vw,2.2rem);
+  color:#86616b;
+  opacity:0;
+  animation:finalAppear 3s ease forwards;
+  animation-delay:2.3s;
 }
 
-@keyframes finalTitle{
-    from{
-        opacity:0;
-        transform:translateY(18px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-@keyframes finalSubtitle{
-    from{
-        opacity:0;
-        transform:translateY(15px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-.falling-layer{
-    position:absolute;
-    inset:0;
-    overflow:hidden;
-    pointer-events:none;
-    z-index:1;
+@keyframes finalAppear{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
 .falling{
-    position:absolute;
-    top:-60px;
-    animation:fall linear infinite;
-    opacity:.7;
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
+}
+
+.falling-item{
+  position:absolute;
+  top:-40px;
+  font-size:1.5rem;
+  opacity:.75;
+  animation:fall linear forwards;
 }
 
 @keyframes fall{
-    0%{
-        transform:translateY(-80px) rotate(0deg);
-    }
-
-    100%{
-        transform:translateY(115vh) rotate(360deg);
-    }
+  0%{
+    transform:translateY(-50px) rotate(0deg);
+  }
+  100%{
+    transform:translateY(110vh) rotate(360deg);
+  }
 }
 
-/* =========================================================
-   SMALL SCREENS
-========================================================= */
+/* =========================
+   RESPONSIVE
+========================= */
 
-@media(max-width:600px){
+@media(max-width:480px){
+  section{
+    padding-left:15px;
+    padding-right:15px;
+  }
 
-    .screen{
-        padding:35px 16px 60px;
-    }
+  .card{
+    padding:28px 20px;
+  }
 
-    .lock-card{
-        padding:30px 20px;
-    }
+  h2{
+    font-size:2.6rem;
+  }
 
-    .intro-card{
-        padding:35px 22px;
-    }
+  .song-button{
+    padding:17px;
+  }
 
-    .notebook{
-        padding:45px 22px 55px 48px;
-    }
-
-    .notebook::before{
-        left:31px;
-    }
-
-    .letter-text{
-        font-size:1.22rem;
-    }
-
-    .envelope{
-        height:230px;
-    }
-
-    .jar{
-        width:180px;
-        height:225px;
-    }
-
-    .jar::before{
-        width:180px;
-    }
+  .puzzle-board{
+    width:94vw;
+  }
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- =======================================================
-     1. LOCK
-======================================================= -->
+<!-- =====================================================
+     1. HEART LOCK
+===================================================== -->
 
-<section id="lock" class="screen">
-    <div class="lock-card">
+<section id="lock">
+  <div class="lock-box">
 
-        <div class="lock-flower">🌷</div>
+    <div class="lock-icon">🔐</div>
 
-        <h1>Before you enter…</h1>
+    <h1>A little something for you ♡</h1>
 
-        <p class="lock-subtitle">
-            A tiny little test for the birthday boy ♡
-        </p>
+    <p class="lock-subtitle">
+      Before you enter… prove that you know us. 🌷
+    </p>
 
-        <form id="lockForm">
+    <form id="lockForm">
 
-            <div id="questions" class="question-box"></div>
+      <div id="lockQuestions"></div>
 
-            <div id="lockError" class="lock-error"></div>
+      <button type="submit" class="main-btn">
+        Unlock ♡
+      </button>
 
-            <button type="submit" class="primary-btn">
-                Unlock ♡
-            </button>
+      <div id="lockError" class="error"></div>
 
-        </form>
+    </form>
 
-    </div>
+  </div>
 </section>
 
 
-<!-- =======================================================
+<!-- =====================================================
      2. SONG SELECTION
-======================================================= -->
+===================================================== -->
 
-<section id="songs" class="screen hidden">
-    <div class="content">
+<section id="songs" class="hidden">
 
-        <h2>Choose a song ♫</h2>
+  <div class="song-intro">
+    <h2>Choose a song 🎵</h2>
+    <p>Pick the one you want to listen to while you continue.</p>
+  </div>
 
-        <p class="song-intro">
-            Pick whichever one feels right.
-            This little surprise starts with you.
-        </p>
+  <div id="songList" class="song-list"></div>
 
-        <div id="songList" class="song-list"></div>
-
-    </div>
 </section>
 
 
-<!-- =======================================================
-     3. INTRO
-======================================================= -->
+<!-- =====================================================
+     3. BIRTHDAY INTRO
+===================================================== -->
 
-<section id="intro" class="screen hidden">
-    <div class="intro-card">
+<section id="intro" class="hidden">
 
-        <h2>Happy Birthday, Carino ♡</h2>
+  <div class="card intro-card">
 
-        <p>
-            I wanted to make something that felt a little more personal than
-            just sending you a birthday message. So I put together this tiny
-            corner of the internet filled with things that remind me of you.
-            There are memories, little surprises, words I wanted you to read,
-            and a few things that are very specifically us. I hope you take
-            your time going through it. Most importantly, I hope you know how
-            much you mean to me.
-        </p>
+    <div class="intro-flower">🌷</div>
 
-        <br>
+    <h2>Happy Birthday, Carino ♡</h2>
 
-        <button class="primary-btn" type="button" onclick="showSection('memories')">
-            Start ♡
-        </button>
+    <p>
+      I wanted to make something a little different for your birthday,
+      something that feels like us and keeps a few of the little memories
+      that mean so much to me. We have shared so many ordinary moments that
+      somehow became some of my favourite memories. So take your time,
+      look around, and enjoy this little piece of my heart made just for you. ♡
+    </p>
 
-    </div>
+    <button class="main-btn" onclick="showSection('memories')">
+      Continue ♡
+    </button>
+
+  </div>
+
 </section>
 
 
-<!-- =======================================================
+<!-- =====================================================
      4. MEMORIES
-======================================================= -->
+===================================================== -->
 
-<section id="memories" class="screen hidden">
-    <div class="content">
+<section id="memories" class="hidden">
 
-        <h2 class="memories-title">
-            The memories we share
-        </h2>
+  <h2 class="memories-title">The memories we share</h2>
 
-        <p class="memories-subtitle">
-            A few little moments I never want to forget.
-        </p>
+  <p class="memories-subtitle">
+    A few little moments I never want to forget. ♡
+  </p>
 
-        <div class="memory-grid">
+  <div class="memory-grid">
 
-            <img
-                class="memory-photo"
-                src="2a9c0291-d66a-46a7-bd40-6d751050d81c.JPG"
-                alt="A memory together"
-            >
-
-            <img
-                class="memory-photo"
-                src="IMG_6830.jpg"
-                alt="A memory together"
-            >
-
-            <img
-                class="memory-photo"
-                src="3F4401DF-DBB8-4E14-A1D9-EA782CFC29D6.jpeg"
-                alt="A memory together"
-            >
-
-        </div>
-
-        <button class="primary-btn" type="button" onclick="showSection('puzzle')">
-            There's something to solve 🧩
-        </button>
-
+    <!-- PHOTO 1 -->
+    <div class="memory-card">
+      <img
+        class="memory-photo"
+        src="2a9c0291-d66a-46a7-bd40-6d751050d81c.JPG"
+        alt="A memory"
+        onerror="showPhotoError(this)"
+      >
+      <div class="photo-error">
+        Photo couldn't load.
+      </div>
+      <div class="memory-caption">
+        One of our little moments ♡
+      </div>
     </div>
+
+
+    <!-- PHOTO 2 -->
+    <div class="memory-card">
+      <img
+        class="memory-photo"
+        src="IMG_6830.jpg"
+        alt="A memory"
+        onerror="showPhotoError(this)"
+      >
+      <div class="photo-error">
+        Photo couldn't load.
+      </div>
+      <div class="memory-caption">
+        A memory worth keeping
+      </div>
+    </div>
+
+
+    <!-- PHOTO 3 — FIXED EXACT FILENAME -->
+    <div class="memory-card">
+      <img
+        class="memory-photo"
+        src="3F4401DF-DBB8-4E14-A1D9-EA782CFC29D6.jpeg"
+        alt="A memory"
+        onerror="showPhotoError(this)"
+      >
+      <div class="photo-error">
+        Photo couldn't load.
+      </div>
+      <div class="memory-caption">
+        Another little piece of us ♡
+      </div>
+    </div>
+
+  </div>
+
+  <button class="main-btn" onclick="showSection('puzzle')" style="margin-top:45px;">
+    There's more… 🧩
+  </button>
+
 </section>
 
 
-<!-- =======================================================
+<!-- =====================================================
      5. ROSE PUZZLE
-======================================================= -->
+===================================================== -->
 
-<section id="puzzle" class="screen hidden">
-    <div class="content">
+<section id="puzzle" class="hidden">
 
-        <h2>Put it together 🌹</h2>
+  <h2>Put us back together 🌹</h2>
 
-        <p class="puzzle-description">
-            Six little pieces. One little memory.
-        </p>
+  <p class="puzzle-subtitle">
+    Tap two pieces to swap them. Finish the little rose puzzle. ♡
+  </p>
 
-        <div id="puzzleBoard" class="puzzle-board"></div>
+  <div id="puzzleBoard" class="puzzle-board"></div>
 
-        <div id="puzzleMessage" class="puzzle-message">
-            Tap two pieces to swap them.
-        </div>
+  <div id="puzzleMessage" class="puzzle-message"></div>
 
-        <button
-            id="puzzleNext"
-            class="primary-btn hidden"
-            type="button"
-            onclick="showSection('envelope')"
-        >
-            Continue ♡
-        </button>
+  <button
+    id="puzzleContinue"
+    class="main-btn hidden"
+    onclick="showSection('envelope')"
+  >
+    You did it ♡
+  </button>
 
-    </div>
 </section>
 
 
-<!-- =======================================================
+<!-- =====================================================
      6. ENVELOPE
-======================================================= -->
+===================================================== -->
 
-<section id="envelope" class="screen hidden">
-    <div class="content envelope-area">
+<section id="envelope" class="hidden">
 
-        <h2>A letter for you 💌</h2>
+  <h2>A letter for you 💌</h2>
 
-        <p class="envelope-caption">
-            Tap the envelope.
-        </p>
+  <div class="envelope-wrap" onclick="openEnvelope()">
 
-        <div
-            id="envelopeBox"
-            class="envelope"
-            onclick="openEnvelope()"
-            role="button"
-            aria-label="Open the envelope"
-        >
+    <div id="envelopeBox" class="envelope">
 
-            <div class="letter-peek">
-                For Carino ♡
-            </div>
+      <div class="envelope-back"></div>
 
-            <div class="envelope-body"></div>
+      <div class="envelope-letter">
+        For Carino ♡
+      </div>
 
-            <div class="envelope-flap"></div>
+      <div class="envelope-flap"></div>
 
-        </div>
-
-        <p class="small">
-            There's something I really wanted to tell you.
-        </p>
+      <div class="envelope-front"></div>
 
     </div>
-</section>
 
+  </div>
 
-<!-- =======================================================
-     7. LETTER
-======================================================= -->
-
-<section id="letter" class="screen hidden">
-
-    <div class="notebook">
-
-        <div class="notebook-header">
-            <h2>Dear Carino, ♡</h2>
-        </div>
-
-        <div class="letter-text">
-
-            <p>
-                There are so many little things about us that stay in my mind,
-                even the ones that probably seem completely ordinary.
-            </p>
-
-            <p>
-                I love that we have spent time together with your family and
-                with my brothers. I love the days when we watched movies
-                together, and especially those nights when somehow we would
-                start talking and suddenly it was already two or three in the
-                morning. I don't even know how the hours disappeared so quickly.
-            </p>
-
-            <p>
-                I loved cooking together too. Honestly, half the time I wasn't
-                even concentrating on what we were cooking because I was too busy
-                watching you. I would end up taking videos of you because I
-                genuinely love taking videos of you. And you never really let
-                me do much work while we were cooking anyway.
-            </p>
-
-            <p>
-                You used to be there whenever I needed you, except for those
-                times when you were busy, and that meant more to me than I
-                probably said out loud.
-            </p>
-
-            <p>
-                And then there were the flowers.
-            </p>
-
-            <div class="special-memory">
-
-                <p>
-                    Whenever you went somewhere and got flowers, you would get
-                    them for me. And if you happened to see flowers somewhere,
-                    you would sometimes just pick one and give it to me.
-                </p>
-
-                <p>
-                    Even those tiny little sunflower-looking flowers make me
-                    smile because you would pick six or seven of them and make
-                    this tiny little bouquet.
-                </p>
-
-            </div>
-
-            <p>
-                I absolutely adore hearing you sing. You could sing the same
-                song a million times and I would still want to hear you sing
-                it again. There is just something about hearing your voice that
-                I love, and I don't think I could ever get tired of it.
-            </p>
-
-            <p>
-                And I can never forget the first bouquet you gave me.
-            </p>
-
-            <div class="special-memory">
-
-                <p>
-                    It had yellow flowers, purple flowers whose name I still
-                    don't know, a pink rose, and hibiscus. It was the first
-                    bouquet and the first flowers I received from you, so it
-                    became special to me in a way that probably had nothing to
-                    do with the flowers themselves.
-                </p>
-
-            </div>
-
-            <p>
-                It's funny because some of my favourite memories aren't even
-                huge moments. They're the little things. Cooking. Singing.
-                Watching movies. Staying awake way too late. You bringing me
-                flowers. Me watching you while you're doing something and
-                secretly taking another video.
-            </p>
-
-            <p class="cheesecake">
-                And yes… after all this time, I still remember the cheesecake.
-                I asked for cheesecake for FOUR MONTHS and somehow I still
-                haven't received it. 😭
-            </p>
-
-            <p>
-                But jokes aside, no matter who you become, or how much you
-                change, I know there will always be a part of me that cares
-                about you and adores you.
-            </p>
-
-            <p>
-                I hope you know that you are loved. I hope you know that you
-                matter. And I hope you know that all those tiny memories we
-                made have a special place in my heart.
-            </p>
-
-            <p>
-                Happy birthday, Carino. ♡
-            </p>
-
-            <p class="letter-end">
-                I am STILL waiting for my cheesecake. 😭🤍
-            </p>
-
-        </div>
-
-        <div style="text-align:center;margin-top:45px;">
-
-            <button
-                class="primary-btn"
-                type="button"
-                onclick="showSection('jarSection')"
-            >
-                One more little thing… 🫙
-            </button>
-
-        </div>
-
-    </div>
+  <p class="envelope-hint">
+    Tap the envelope ♡
+  </p>
 
 </section>
 
 
-<!-- =======================================================
-     8. LOVE NOTE JAR
-======================================================= -->
+<!-- =====================================================
+     7. HEARTFELT LETTER
+===================================================== -->
 
-<section id="jarSection" class="screen hidden">
+<section id="letter" class="hidden">
 
-    <div class="content">
+  <div class="letter-paper">
 
-        <h2 class="jar-heading">A jar of little notes 🫙</h2>
+    <div class="letter-content">
 
-        <p class="jar-subtitle">
-            Every time you tap the jar, one note appears.
-        </p>
+      <h2>Dear Carino ♡</h2>
 
-        <div id="remainingCount" class="remaining">
-            10 notes remaining ♡
-        </div>
+      <p>
+        There are so many little things about us that I keep thinking about.
+        Not just the huge moments, but the tiny ordinary ones that somehow
+        became some of the most special memories for me.
+      </p>
 
-        <div class="jar-wrap">
+      <p>
+        I loved all the time we spent together — being around your family,
+        spending time with my brothers, watching movies together, and just
+        being around each other. Even doing absolutely nothing somehow felt
+        special when it was with you.
+      </p>
 
-            <div
-                id="jarVisual"
-                class="jar"
-                onclick="openNote()"
-                role="button"
-                aria-label="Open a love note"
-            ></div>
+      <p>
+        And then there were those nights when we would stay up talking until
+        two or three in the morning. We would keep talking and talking,
+        even when we both knew we probably should have been sleeping.
+        Somehow those late-night conversations became some of my favourite
+        memories.
+      </p>
 
-        </div>
+      <p>
+        I also loved cooking together. You probably don't even realise how
+        much I enjoyed those moments. I would usually end up watching you
+        more than actually helping, and of course I would take videos of you
+        because I genuinely love taking videos of you.
+      </p>
 
-        <div id="jarNote" class="jar-note"></div>
+      <p>
+        And you never really let me do much work while we were cooking.
+        You would just do things yourself and somehow make it feel like
+        I was there to keep you company rather than actually help.
+      </p>
 
-        <div id="jarDone" class="jar-done"></div>
+      <p>
+        I remember how you used to be there whenever I needed you,
+        except for those times when you were genuinely busy. It meant a lot
+        to me knowing that I could look for you and you'd be there.
+      </p>
 
-        <button
-            id="jarFinish"
-            class="primary-btn hidden"
-            type="button"
-            onclick="showSection('final')"
-        >
-            Finish the surprise ✨
-        </button>
+      <p>
+        And the flowers… I don't think you ever realised how much those
+        tiny gestures meant to me. Whenever you went somewhere and got me
+        flowers, I would be so happy. Even if you simply saw flowers
+        somewhere and picked one for me, it meant so much.
+      </p>
+
+      <p>
+        I especially remember those tiny sunflower-like flowers.
+        You would pick six or seven of them and make this tiny little
+        bouquet. It wasn't some huge expensive thing, but somehow that made
+        it even more special to me.
+      </p>
+
+      <p>
+        And I absolutely adore hearing you sing. You could sing the same
+        song a million times and I would still want to hear you sing it
+        again. There is just something about hearing you sing that makes
+        me ridiculously happy.
+      </p>
+
+      <p>
+        And then there was your first bouquet for me.
+        The yellow flowers, the purple flowers whose name I still don't know,
+        the pink rose, and the hibiscus. I still remember it because it was
+        the first bouquet of flowers I received from you, and that makes it
+        special in a way that another bouquet could never completely replace.
+      </p>
+
+      <p>
+        There is also one very important thing that I absolutely cannot
+        forget…
+      </p>
+
+      <p class="letter-highlight">
+        I asked you for cheesecake for FOUR MONTHS. 😭
+      </p>
+
+      <p>
+        And somehow I am still waiting for it.
+        FOUR MONTHS, Carino. FOUR. MONTHS. 😭
+      </p>
+
+      <p>
+        But honestly, jokes aside, there is something I want you to know.
+        No matter who you become, or how much you change, or who you are
+        at any point in your life, I will still care about you.
+        I will still adore the little things about you that made these
+        memories so special to me.
+      </p>
+
+      <p>
+        These memories will always have a special place in my heart.
+        The flowers, the late nights, the movies, cooking together,
+        singing, the random videos, the little bouquets, and all those
+        ordinary moments that became extraordinary simply because they
+        happened with you.
+      </p>
+
+      <p>
+        I hope you know how loved you are, how much you matter,
+        and how many little pieces of happiness you have brought into
+        my life.
+      </p>
+
+      <p class="letter-highlight">
+        Happy birthday, Carino. ♡
+      </p>
+
+      <p class="letter-highlight">
+        And yes… I am STILL waiting for my cheesecake. 😭🤍
+      </p>
+
+      <p class="signature">
+        With love, always ♡
+      </p>
 
     </div>
+
+  </div>
+
+  <button
+    class="main-btn"
+    onclick="showSection('jarSection')"
+    style="margin-top:40px;"
+  >
+    One more thing… 🫙
+  </button>
 
 </section>
 
 
-<!-- =======================================================
+<!-- =====================================================
+     8. JAR OF 10 LOVE NOTES
+===================================================== -->
+
+<section id="jarSection" class="hidden">
+
+  <h2>A jar full of little notes 🫙</h2>
+
+  <p class="jar-subtitle">
+    There are 10 little messages waiting for you.
+  </p>
+
+  <div id="remaining" class="remaining">
+    10 notes remaining ♡
+  </div>
+
+  <div class="jar-area">
+
+    <div
+      id="jarVisual"
+      class="jar"
+      onclick="openNote()"
+      aria-label="Open a love note"
+    >
+      <div class="jar-label">
+        Little things<br>
+        I love about you ♡
+      </div>
+    </div>
+
+  </div>
+
+  <div id="noteMessage" class="note-message">
+    Tap the jar to take a note ♡
+  </div>
+
+  <button
+    id="finishButton"
+    class="main-btn finish-btn"
+    onclick="showSection('final')"
+  >
+    One last thing… ♡
+  </button>
+
+</section>
+
+
+<!-- =====================================================
      9. FINAL
-======================================================= -->
+===================================================== -->
 
-<section id="final" class="screen hidden">
+<section id="final" class="hidden">
 
-    <div id="fallingLayer" class="falling-layer"></div>
+  <div id="falling" class="falling"></div>
 
-    <div class="final-content">
+  <div class="final-content">
 
-        <h1 class="final-title">
-            Happy Birthday, Carino ♡
-        </h1>
+    <h1 class="final-title">
+      Happy Birthday, Carino ♡
+    </h1>
 
-        <div class="final-subtitle">
-            You are loved more than you imagine.
-        </div>
+    <p class="final-subtitle">
+      You are loved more than you imagine.
+    </p>
 
-    </div>
+  </div>
 
 </section>
 
 
-<!-- =======================================================
+<!-- =====================================================
      AUDIO
-======================================================= -->
+===================================================== -->
 
-<audio id="audioPlayer" preload="auto"></audio>
+<audio id="audioPlayer" loop></audio>
 
 
 <script>
 
-/* =========================================================
-   WEBSITE SETTINGS
-   Change things here later if you want to add/edit sections.
-========================================================= */
+/* =====================================================
+   CENTRAL SECTION LIST
+   Keep this list when adding future sections.
+===================================================== */
 
 const SECTION_IDS = [
-    "lock",
-    "songs",
-    "intro",
-    "memories",
-    "puzzle",
-    "envelope",
-    "letter",
-    "jarSection",
-    "final"
+  "lock",
+  "songs",
+  "intro",
+  "memories",
+  "puzzle",
+  "envelope",
+  "letter",
+  "jarSection",
+  "final"
 ];
 
 
-/* =========================================================
-   SONGS
-   These files must be in the SAME folder as index.html.
-========================================================= */
-
-const SONGS = [
-    {
-        title: "I Thought I Saw Your Face Today",
-        artist: "She & Him",
-        file: "AUDIO-2026-09-05-14-00-58.mp3"
-    },
-    {
-        title: "The Way I Loved You",
-        artist: "Taylor Swift",
-        file: "AUDIO-2026-09-05-14-01-16(1).mp3"
-    },
-    {
-        title: "Can't Help Falling in Love",
-        artist: "Elvis Presley",
-        file: "AUDIO-2026-09-05-14-01-33.mp3"
-    }
-];
-
-
-/* =========================================================
-   PUZZLE IMAGE
-========================================================= */
-
-const PUZZLE_IMAGE =
-    "45B4C78E-F6F0-4160-8CBE-3E776BBA2E0C.jpeg";
-
-
-/* =========================================================
-   LOCK QUESTIONS
-========================================================= */
-
-const LOCK_QUESTIONS = [
-
-    {
-        question: "What nickname do I call you? ♡",
-        answers: [
-            "carino"
-        ]
-    },
-
-    {
-        question: "When is our anniversary? 🌷",
-        answers: [
-            "23 january",
-            "23rd january",
-            "january 23",
-            "january 23rd",
-            "23/01",
-            "23-01",
-            "23.01"
-        ]
-    },
-
-    {
-        question: "What's my favourite flower? 🌸",
-        answers: [
-            "lily"
-        ]
-    }
-
-];
-
-
-/* =========================================================
-   10 LOVE NOTES
-========================================================= */
-
-const NOTES = [
-
-    "You are one of my favourite people in this whole world. ♡",
-
-    "I could listen to you sing the same song a million times and still smile.",
-
-    "Some of my favourite memories are the quiet little moments we shared.",
-
-    "You bringing me flowers will always be one of the sweetest things to me. 🌷",
-
-    "I love the way ordinary moments became special when I was with you.",
-
-    "You will always have a special little place in my heart. ♡",
-
-    "I hope this year gives you so many reasons to smile.",
-
-    "Thank you for all the little things you probably didn't realize I noticed.",
-
-    "I hope you never forget how loved and important you are.",
-
-    "And yes… I still want my cheesecake. 😭🤍"
-
-];
-
-
-/* =========================================================
-   GLOBAL VARIABLES
-========================================================= */
-
-const audioPlayer = document.getElementById("audioPlayer");
-
-let selectedSong = null;
-
-let puzzleTiles = [];
-let puzzleSelected = null;
-let puzzleSolved = false;
-
-let envelopeOpened = false;
-
-let notePool = [];
-let notesInitialized = false;
-
-
-/* =========================================================
-   NORMALIZE TEXT
-   This prevents problems like:
-   " Lily "
-   "LILY"
-   "lily"
-   all being treated differently.
-========================================================= */
-
-function normalizeAnswer(value){
-
-    return String(value || "")
-        .toLowerCase()
-        .trim()
-        .replace(/[’']/g, "")
-        .replace(/[^a-z0-9]+/g, " ")
-        .replace(/\s+/g, " ")
-        .trim();
-
-}
-
-
-/* =========================================================
-   LOCK QUESTIONS
-========================================================= */
-
-function buildLockQuestions(){
-
-    const container = document.getElementById("questions");
-
-    container.innerHTML = "";
-
-    LOCK_QUESTIONS.forEach((item, index) => {
-
-        const wrapper = document.createElement("div");
-
-        wrapper.className = "question";
-
-        wrapper.innerHTML = `
-            <label for="answer${index}">
-                ${item.question}
-            </label>
-
-            <input
-                id="answer${index}"
-                type="text"
-                autocomplete="off"
-                autocapitalize="none"
-                spellcheck="false"
-                placeholder="Your answer…"
-            >
-        `;
-
-        container.appendChild(wrapper);
-
-    });
-
-}
-
-
-/* =========================================================
-   CHECK LOCK
-========================================================= */
-
-function checkLock(event){
-
-    if(event){
-        event.preventDefault();
-    }
-
-    const error = document.getElementById("lockError");
-
-    let allCorrect = true;
-
-    LOCK_QUESTIONS.forEach((item, index) => {
-
-        const input = document.getElementById(`answer${index}`);
-
-        const userAnswer = normalizeAnswer(input.value);
-
-        const validAnswers = item.answers.map(normalizeAnswer);
-
-        if(!validAnswers.includes(userAnswer)){
-            allCorrect = false;
-        }
-
-    });
-
-
-    if(allCorrect){
-
-        error.textContent = "";
-
-        showSection("songs");
-
-    }else{
-
-        error.textContent =
-            "One of the answers isn't quite right. Try again, birthday boy. ♡";
-
-    }
-
-}
-
-
-/* =========================================================
+/* =====================================================
    NAVIGATION
-   All section changes go through this one function.
-   This makes the website much easier to continue later.
-========================================================= */
+===================================================== */
 
 function showSection(id){
 
-    SECTION_IDS.forEach(sectionId => {
+  SECTION_IDS.forEach(sectionId => {
 
-        const section = document.getElementById(sectionId);
+    const section = document.getElementById(sectionId);
 
-        if(section){
-            section.classList.add("hidden");
-        }
-
-    });
-
-
-    const target = document.getElementById(id);
-
-    if(!target){
-        console.error("Section not found:", id);
-        return;
+    if(section){
+      section.classList.add("hidden");
     }
 
+  });
 
-    target.classList.remove("hidden");
+  const target = document.getElementById(id);
 
-    window.scrollTo(0,0);
+  if(!target){
+    console.error("Section not found:", id);
+    return;
+  }
+
+  target.classList.remove("hidden");
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+  if(id === "puzzle"){
+    initPuzzle();
+  }
+
+  if(id === "jarSection"){
+    prepareJar();
+  }
+
+  if(id === "final"){
+    startFalling();
+  }
+}
 
 
-    /* Section-specific setup */
+/* =====================================================
+   PHOTO ERROR HANDLER
+===================================================== */
 
-    if(id === "puzzle"){
-        initializePuzzle();
-    }
+function showPhotoError(image){
 
-    if(id === "jarSection"){
-        initializeNotes();
-    }
+  console.error("Could not load image:", image.src);
 
-    if(id === "final"){
-        createFallingElements();
-    }
+  image.style.display = "none";
+
+  const errorBox = image.nextElementSibling;
+
+  if(errorBox){
+    errorBox.style.display = "flex";
+  }
+}
+
+
+/* =====================================================
+   LOCK
+===================================================== */
+
+const LOCK_QUESTIONS = [
+
+  {
+    question:"What nickname do I call you? ♡",
+    answer:["carino"]
+  },
+
+  {
+    question:"When is our anniversary? 🌷",
+    answer:[
+      "23 january",
+      "23rd january",
+      "january 23",
+      "january 23rd",
+      "23/01",
+      "23-01",
+      "23.01"
+    ]
+  },
+
+  {
+    question:"What's my favourite flower? 🌸",
+    answer:["lily"]
+  }
+
+];
+
+
+function normalizeAnswer(value){
+
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/[’']/g,"")
+    .replace(/[!?.,]/g,"")
+    .replace(/\s+/g," ");
 
 }
 
 
-/* =========================================================
-   SONG LIST
-========================================================= */
+function buildLockQuestions(){
 
-function buildSongs(){
+  const container = document.getElementById("lockQuestions");
 
-    const list = document.getElementById("songList");
+  container.innerHTML = "";
 
-    list.innerHTML = "";
+  LOCK_QUESTIONS.forEach((item,index)=>{
 
-    SONGS.forEach((song, index) => {
+    const wrapper = document.createElement("div");
 
-        const item = document.createElement("button");
+    wrapper.className = "question";
 
-        item.type = "button";
-        item.className = "song";
+    wrapper.innerHTML = `
+      <label for="answer${index}">
+        ${item.question}
+      </label>
 
-        item.innerHTML = `
-            <div class="disc"></div>
+      <input
+        id="answer${index}"
+        type="text"
+        autocomplete="off"
+        placeholder="Your answer…"
+      >
+    `;
 
-            <div>
-                <b>${song.title}</b>
-                <span>${song.artist}</span>
-            </div>
-        `;
+    container.appendChild(wrapper);
 
-        item.addEventListener("click", () => {
-            selectSong(index);
-        });
-
-        list.appendChild(item);
-
-    });
+  });
 
 }
 
 
-/* =========================================================
-   SELECT SONG
-========================================================= */
+function checkLock(event){
+
+  event.preventDefault();
+
+  let correct = true;
+
+  LOCK_QUESTIONS.forEach((item,index)=>{
+
+    const input = document.getElementById(`answer${index}`);
+
+    const userAnswer = normalizeAnswer(input.value);
+
+    const acceptedAnswers = item.answer.map(normalizeAnswer);
+
+    if(!acceptedAnswers.includes(userAnswer)){
+      correct = false;
+    }
+
+  });
+
+
+  const error = document.getElementById("lockError");
+
+  if(correct){
+
+    error.textContent = "";
+
+    showSection("songs");
+
+  }else{
+
+    error.textContent =
+      "Hmm… one of those isn't quite right. Try again, Carino ♡";
+
+  }
+
+}
+
+
+/* =====================================================
+   SONGS
+===================================================== */
+
+const SONGS = [
+
+  {
+    title:"I Thought I Saw Your Face Today",
+    artist:"She & Him",
+    file:"AUDIO-2026-09-05-14-00-58.mp3"
+  },
+
+  {
+    title:"The Way I Loved You",
+    artist:"Taylor Swift",
+    file:"AUDIO-2026-09-05-14-01-16(1).mp3"
+  },
+
+  {
+    title:"Can't Help Falling in Love",
+    artist:"Elvis Presley",
+    file:"AUDIO-2026-09-05-14-01-33.mp3"
+  }
+
+];
+
+
+const audioPlayer = document.getElementById("audioPlayer");
+
+
+function buildSongList(){
+
+  const list = document.getElementById("songList");
+
+  list.innerHTML = "";
+
+  SONGS.forEach((song,index)=>{
+
+    const button = document.createElement("button");
+
+    button.className = "song-button";
+
+    button.innerHTML = `
+      <div class="song-number">${index + 1}</div>
+
+      <div>
+        <div class="song-title">${song.title}</div>
+        <div class="song-artist">${song.artist}</div>
+      </div>
+    `;
+
+    button.onclick = () => selectSong(index);
+
+    list.appendChild(button);
+
+  });
+
+}
+
 
 function selectSong(index){
 
-    const song = SONGS[index];
+  const song = SONGS[index];
 
-    if(!song){
-        return;
-    }
+  audioPlayer.src = song.file;
+  audioPlayer.loop = true;
 
-    selectedSong = index;
+  audioPlayer.play()
+    .catch(error => {
+      console.log("Audio needs user interaction:",error);
+    });
 
-    audioPlayer.pause();
-
-    audioPlayer.src = song.file;
-
-    audioPlayer.loop = true;
-
-    audioPlayer.currentTime = 0;
-
-
-    /* Because this happens directly from a user tap,
-       the browser is much more likely to allow playback. */
-
-    const playPromise = audioPlayer.play();
-
-    if(playPromise !== undefined){
-
-        playPromise.catch(() => {
-
-            console.log(
-                "Audio could not autoplay. The browser may require another tap."
-            );
-
-        });
-
-    }
-
-
-    showSection("intro");
+  showSection("intro");
 
 }
 
 
-/* =========================================================
+/* =====================================================
    PUZZLE
-========================================================= */
+===================================================== */
+
+const PUZZLE_IMAGE =
+  "45B4C78E-F6F0-4160-8CBE-3E776BBA2E0C.jpeg";
+
+let puzzleOrder = [];
+let selectedPiece = null;
+let puzzleStarted = false;
+
 
 function shuffleArray(array){
 
-    const copy = [...array];
+  const copy = [...array];
 
-    for(let i = copy.length - 1; i > 0; i--){
+  for(let i=copy.length-1;i>0;i--){
 
-        const j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(Math.random()*(i+1));
 
-        [copy[i], copy[j]] = [copy[j], copy[i]];
+    [copy[i],copy[j]] = [copy[j],copy[i]];
 
-    }
+  }
 
-    return copy;
-
+  return copy;
 }
 
 
-function initializePuzzle(){
+function initPuzzle(){
 
-    if(puzzleSolved){
-        return;
-    }
+  if(puzzleStarted){
+    return;
+  }
 
-    const board = document.getElementById("puzzleBoard");
+  puzzleStarted = true;
 
-    board.innerHTML = "";
+  puzzleOrder = shuffleArray([0,1,2,3,4,5]);
 
-    puzzleSelected = null;
-
-
-    /* Six pieces.
-       Each number represents the correct position. */
-
-    puzzleTiles = shuffleArray([0,1,2,3,4,5]);
-
-
-    /* Make sure it doesn't accidentally start solved. */
-
-    if(puzzleTiles.every((value,index) => value === index)){
-
-        [puzzleTiles[0],puzzleTiles[1]] =
-        [puzzleTiles[1],puzzleTiles[0]];
-
-    }
-
-
-    puzzleTiles.forEach((correctPosition, currentPosition) => {
-
-        const piece = document.createElement("button");
-
-        piece.type = "button";
-
-        piece.className = "puzzle-piece";
-
-        piece.dataset.correct = correctPosition;
-
-        piece.style.backgroundImage =
-            `url("${PUZZLE_IMAGE}")`;
-
-        const column = correctPosition % 3;
-
-        const row = Math.floor(correctPosition / 3);
-
-        piece.style.backgroundPosition =
-            `${column * 50}% ${row * 100}%`;
-
-        piece.addEventListener("click", () => {
-
-            handlePuzzleClick(currentPosition);
-
-        });
-
-        board.appendChild(piece);
-
-    });
-
-}
-
-
-function handlePuzzleClick(position){
-
-    if(puzzleSolved){
-        return;
-    }
-
-
-    const pieces =
-        [...document.querySelectorAll(".puzzle-piece")];
-
-
-    /* First selected piece */
-
-    if(puzzleSelected === null){
-
-        puzzleSelected = position;
-
-        pieces[position].classList.add("selected");
-
-        return;
-
-    }
-
-
-    /* Tapping the same piece again deselects it. */
-
-    if(puzzleSelected === position){
-
-        pieces[position].classList.remove("selected");
-
-        puzzleSelected = null;
-
-        return;
-
-    }
-
-
-    /* Swap */
-
-    const first = puzzleSelected;
-
-    const second = position;
-
-
-    [puzzleTiles[first], puzzleTiles[second]] =
-    [puzzleTiles[second], puzzleTiles[first]];
-
-
-    renderPuzzle();
-
-
-    puzzleSelected = null;
-
-
-    if(isPuzzleSolved()){
-
-        puzzleSolved = true;
-
-        document.getElementById("puzzleMessage").textContent =
-            "You did it. 🌹";
-
-        document
-            .getElementById("puzzleNext")
-            .classList.remove("hidden");
-
-    }
+  renderPuzzle();
 
 }
 
 
 function renderPuzzle(){
 
-    const pieces =
-        [...document.querySelectorAll(".puzzle-piece")];
+  const board = document.getElementById("puzzleBoard");
 
+  board.innerHTML = "";
 
-    pieces.forEach((piece,index) => {
+  puzzleOrder.forEach((pieceIndex,position)=>{
 
-        const correctPosition = puzzleTiles[index];
+    const piece = document.createElement("div");
 
-        const column = correctPosition % 3;
+    piece.className = "puzzle-piece";
 
-        const row = Math.floor(correctPosition / 3);
+    const column = pieceIndex % 3;
+    const row = Math.floor(pieceIndex / 3);
 
-        piece.dataset.correct = correctPosition;
+    piece.style.backgroundImage =
+      `url("${PUZZLE_IMAGE}")`;
 
-        piece.style.backgroundPosition =
-            `${column * 50}% ${row * 100}%`;
+    piece.style.backgroundPosition =
+      `${column * 50}% ${row * 100}%`;
 
-        piece.classList.remove("selected");
+    piece.dataset.position = position;
 
-    });
+    piece.onclick = () => selectPuzzlePiece(position,piece);
+
+    board.appendChild(piece);
+
+  });
 
 }
 
 
-function isPuzzleSolved(){
+function selectPuzzlePiece(position,element){
 
-    return puzzleTiles.every(
-        (value,index) => value === index
+  if(selectedPiece === null){
+
+    selectedPiece = position;
+
+    element.classList.add("selected");
+
+    return;
+  }
+
+
+  if(selectedPiece === position){
+
+    element.classList.remove("selected");
+
+    selectedPiece = null;
+
+    return;
+  }
+
+
+  [
+    puzzleOrder[selectedPiece],
+    puzzleOrder[position]
+  ] =
+  [
+    puzzleOrder[position],
+    puzzleOrder[selectedPiece]
+  ];
+
+
+  selectedPiece = null;
+
+  renderPuzzle();
+
+  checkPuzzle();
+
+}
+
+
+function checkPuzzle(){
+
+  const solved =
+    puzzleOrder.every(
+      (value,index) => value === index
     );
 
+  const message =
+    document.getElementById("puzzleMessage");
+
+  const continueButton =
+    document.getElementById("puzzleContinue");
+
+
+  if(solved){
+
+    message.textContent =
+      "You put it back together. 🌹♡";
+
+    continueButton.classList.remove("hidden");
+
+  }else{
+
+    message.textContent =
+      "Keep going… you're almost there. ♡";
+
+  }
+
 }
 
 
-/* =========================================================
+/* =====================================================
    ENVELOPE
-========================================================= */
+===================================================== */
+
+let envelopeOpened = false;
+
 
 function openEnvelope(){
 
-    if(envelopeOpened){
-        return;
-    }
+  if(envelopeOpened){
+    return;
+  }
 
-    envelopeOpened = true;
+  envelopeOpened = true;
 
-    const envelope =
-        document.getElementById("envelopeBox");
+  const envelope =
+    document.getElementById("envelopeBox");
 
-    envelope.classList.add("open");
+  envelope.classList.add("open");
 
+  setTimeout(()=>{
 
-    /* Give the flap time to open before moving on. */
+    showSection("letter");
 
-    setTimeout(() => {
-
-        showSection("letter");
-
-    }, 1500);
+  },1500);
 
 }
 
 
-/* =========================================================
-   LOVE NOTE JAR
-========================================================= */
+/* =====================================================
+   LOVE NOTES
+===================================================== */
 
-function initializeNotes(){
+const NOTES = [
 
-    if(notesInitialized){
-        return;
-    }
+  "I love the way you make ordinary moments feel special. ♡",
+
+  "I could listen to you sing the same song a million times. 🎶",
+
+  "You will always be one of my favourite people to make memories with. ♡",
+
+  "The little flowers you gave me meant more than you probably realised. 🌷",
+
+  "I love watching you when you don't realise I'm watching. 🤍",
+
+  "Some of my favourite nights were the ones where we stayed up talking. 🌙",
+
+  "You have a way of making little things unforgettable.",
+
+  "I will always remember our tiny bouquets. 🌻",
+
+  "No matter how much time passes, some memories will always stay special. ♡",
+
+  "And yes… I am still waiting for that cheesecake. 😭🤍"
+
+];
+
+
+let notePool = [];
+let openedNotes = 0;
+
+
+function prepareJar(){
+
+  if(openedNotes === 0 && notePool.length === 0){
 
     notePool = shuffleArray(NOTES);
 
-    notesInitialized = true;
+  }
 
-    document.getElementById("jarNote").textContent = "";
-
-    document.getElementById("jarDone").textContent = "";
-
-    document
-        .getElementById("jarFinish")
-        .classList.add("hidden");
-
-    updateRemaining();
+  updateRemaining();
 
 }
 
-
-/* =========================================================
-   OPEN ONE NOTE
-========================================================= */
-
-function openNote(){
-
-    if(notePool.length === 0){
-        return;
-    }
-
-
-    const note = notePool.pop();
-
-    const noteBox =
-        document.getElementById("jarNote");
-
-    noteBox.textContent = note;
-
-
-    updateRemaining();
-
-
-    if(notePool.length === 0){
-
-        document.getElementById("jarDone").textContent =
-            "That's all ten. ♡";
-
-        document
-            .getElementById("jarFinish")
-            .classList.remove("hidden");
-
-    }
-
-}
-
-
-/* =========================================================
-   UPDATE REMAINING COUNT
-========================================================= */
 
 function updateRemaining(){
 
-    const count = notePool.length;
+  const remaining =
+    NOTES.length - openedNotes;
 
-    const element =
-        document.getElementById("remainingCount");
+  const element =
+    document.getElementById("remaining");
+
+  if(remaining > 0){
 
     element.textContent =
-        `${count} ${count === 1 ? "note" : "notes"} remaining ♡`;
+      `${remaining} note${remaining === 1 ? "" : "s"} remaining ♡`;
+
+  }else{
+
+    element.textContent =
+      "You opened all 10 notes. ♡";
+
+  }
 
 }
 
 
-/* =========================================================
-   FINAL FALLING FLOWERS / LEAVES / STARS
-========================================================= */
+function openNote(){
 
-function createFallingElements(){
+  if(notePool.length === 0){
 
-    const layer =
-        document.getElementById("fallingLayer");
+    document.getElementById("noteMessage").textContent =
+      "You found every little note. ♡";
 
-    /* Prevent duplicates if final screen is revisited. */
+    document.getElementById("finishButton").style.display =
+      "inline-block";
 
-    if(layer.dataset.created === "true"){
-        return;
-    }
-
-    layer.dataset.created = "true";
+    return;
+  }
 
 
-    const symbols = [
-        "🌸",
-        "🌷",
-        "🌿",
-        "🍃",
-        "✦",
-        "✧",
-        "♡"
-    ];
+  const note = notePool.pop();
+
+  openedNotes++;
+
+  const message =
+    document.getElementById("noteMessage");
+
+  message.innerHTML = "";
+
+  const noteElement =
+    document.createElement("div");
+
+  noteElement.className = "paper-note";
+
+  noteElement.textContent = note;
+
+  message.appendChild(noteElement);
+
+  updateRemaining();
 
 
-    for(let i = 0; i < 42; i++){
+  if(notePool.length === 0){
 
-        const element =
-            document.createElement("span");
+    setTimeout(()=>{
 
-        element.className = "falling";
+      document.getElementById("finishButton").style.display =
+        "inline-block";
 
-        element.textContent =
-            symbols[Math.floor(Math.random() * symbols.length)];
+    },500);
 
-
-        element.style.left =
-            `${Math.random() * 100}%`;
-
-        element.style.fontSize =
-            `${14 + Math.random() * 22}px`;
-
-        element.style.animationDuration =
-            `${7 + Math.random() * 9}s`;
-
-        element.style.animationDelay =
-            `${Math.random() * 8}s`;
-
-        element.style.transform =
-            `rotate(${Math.random() * 180}deg)`;
-
-
-        layer.appendChild(element);
-
-    }
+  }
 
 }
 
 
-/* =========================================================
+/* =====================================================
+   FINAL FALLING DECORATIONS
+===================================================== */
+
+let fallingStarted = false;
+
+
+function startFalling(){
+
+  if(fallingStarted){
+    return;
+  }
+
+  fallingStarted = true;
+
+  const container =
+    document.getElementById("falling");
+
+  const symbols = [
+    "🌸",
+    "🌷",
+    "🌹",
+    "🌼",
+    "🌻",
+    "🍃",
+    "🌿",
+    "✨",
+    "♡"
+  ];
+
+
+  for(let i=0;i<42;i++){
+
+    const item =
+      document.createElement("div");
+
+    item.className = "falling-item";
+
+    item.textContent =
+      symbols[Math.floor(Math.random()*symbols.length)];
+
+    item.style.left =
+      Math.random()*100 + "%";
+
+    item.style.animationDuration =
+      (7 + Math.random()*9) + "s";
+
+    item.style.animationDelay =
+      Math.random()*6 + "s";
+
+    item.style.fontSize =
+      (1 + Math.random()*1.2) + "rem";
+
+    container.appendChild(item);
+
+  }
+
+}
+
+
+/* =====================================================
    STARTUP
-========================================================= */
+===================================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded",()=>{
 
-    buildLockQuestions();
+  buildLockQuestions();
 
-    buildSongs();
+  buildSongList();
 
-
-    document
-        .getElementById("lockForm")
-        .addEventListener("submit", checkLock);
+  document
+    .getElementById("lockForm")
+    .addEventListener("submit",checkLock);
 
 });
 

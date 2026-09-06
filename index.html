@@ -1,555 +1,1911 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8e8e8">
+<title>For Carino ♡</title>
 
-    <title>A Little Surprise for Carino ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <style>
-/* =========================
-   HEART LOCK
-========================= */
+<style>
 
-#heart-lock {
-    width: 120px;
-    height: 110px;
+/* =========================================================
+   BASIC RESET
+========================================================= */
 
-    margin: 20px auto 30px;
-
-    position: relative;
-
-    cursor: pointer;
-
-    transition: transform 0.3s ease;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-#heart-lock:hover {
-    transform: scale(1.05);
+html{
+    scroll-behavior:smooth;
 }
 
-
-/* The heart */
-
-.heart {
-    position: absolute;
-
-    width: 75px;
-    height: 75px;
-
-    background: #c97b83;
-
-    left: 22px;
-    top: 20px;
-
-    transform: rotate(-45deg);
-
-    border-radius: 10px;
-
-    box-shadow:
-        0 8px 20px rgba(130, 70, 75, 0.25);
+body{
+    min-height:100vh;
+    font-family:"DM Sans",sans-serif;
+    color:#4b3437;
+    background:#f8eeee;
+    overflow-x:hidden;
 }
 
-.heart::before,
-.heart::after {
-    content: "";
-
-    position: absolute;
-
-    width: 75px;
-    height: 75px;
-
-    background: #c97b83;
-
-    border-radius: 50%;
+button,
+input{
+    font:inherit;
 }
 
-.heart::before {
-    top: -37px;
-    left: 0;
+button{
+    cursor:pointer;
 }
 
-.heart::after {
-    top: 0;
-    left: 37px;
+/* =========================================================
+   GENERAL SCREEN SYSTEM
+========================================================= */
+
+.screen{
+    min-height:100vh;
+    width:100%;
+    padding:45px 20px 70px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
 }
 
-
-/* Lock body */
-
-.lock-symbol {
-    position: absolute;
-
-    z-index: 5;
-
-    width: 30px;
-    height: 28px;
-
-    left: 45px;
-    top: 45px;
-
-    background: #fff4ed;
-
-    border-radius: 4px;
-
-    box-shadow:
-        0 3px 8px rgba(70,40,40,0.2);
+.hidden{
+    display:none !important;
 }
 
-
-/* Lock shackle */
-
-.lock-symbol::before {
-    content: "";
-
-    position: absolute;
-
-    width: 16px;
-    height: 18px;
-
-    border: 4px solid #fff4ed;
-
-    border-bottom: none;
-
-    border-radius: 12px 12px 0 0;
-
-    left: 3px;
-    top: -15px;
+.content{
+    width:100%;
+    max-width:760px;
+    margin:auto;
+    text-align:center;
 }
 
-
-/* Keyhole */
-
-.keyhole {
-    position: absolute;
-
-    width: 5px;
-    height: 9px;
-
-    border-radius: 5px;
-
-    background: #c97b83;
-
-    left: 12px;
-    top: 8px;
+h1,
+h2,
+h3{
+    font-family:"Cormorant Garamond",serif;
 }
 
-
-/* =========================
-   QUESTIONS
-========================= */
-
-.question {
-    display: none;
-
-    animation: questionAppear 0.5s ease;
+h1{
+    font-size:clamp(3rem,11vw,6rem);
+    font-weight:600;
+    line-height:0.95;
 }
 
-.question.active {
-    display: block;
+h2{
+    font-size:clamp(2.4rem,8vw,4.5rem);
+    font-weight:600;
 }
 
-@keyframes questionAppear {
+p{
+    line-height:1.8;
+}
 
-    from {
-        opacity: 0;
-        transform: translateY(10px);
+.small{
+    font-size:.9rem;
+    opacity:.7;
+}
+
+.primary-btn{
+    border:0;
+    padding:14px 25px;
+    border-radius:999px;
+    background:#7e4c58;
+    color:white;
+    box-shadow:0 8px 20px rgba(80,45,55,.15);
+    transition:.25s ease;
+}
+
+.primary-btn:hover{
+    transform:translateY(-2px);
+}
+
+.primary-btn:active{
+    transform:scale(.97);
+}
+
+/* =========================================================
+   LOCK SCREEN
+========================================================= */
+
+#lock{
+    background:
+        radial-gradient(circle at 20% 20%,rgba(255,255,255,.8),transparent 28%),
+        radial-gradient(circle at 80% 80%,rgba(237,199,207,.5),transparent 30%),
+        #f8eeee;
+}
+
+.lock-card{
+    width:100%;
+    max-width:650px;
+    background:rgba(255,255,255,.72);
+    padding:38px 25px;
+    border-radius:28px;
+    box-shadow:0 20px 60px rgba(80,45,55,.1);
+    backdrop-filter:blur(8px);
+}
+
+.lock-flower{
+    font-size:3rem;
+    margin-bottom:12px;
+}
+
+.lock-card h1{
+    font-size:clamp(2.5rem,9vw,4.5rem);
+    margin-bottom:10px;
+}
+
+.lock-subtitle{
+    margin-bottom:30px;
+    opacity:.7;
+}
+
+.question-box{
+    text-align:left;
+}
+
+.question{
+    margin-bottom:20px;
+}
+
+.question label{
+    display:block;
+    margin-bottom:8px;
+    font-family:"Cormorant Garamond",serif;
+    font-size:1.35rem;
+    font-weight:600;
+}
+
+.question input{
+    width:100%;
+    padding:14px 16px;
+    border:1px solid #dbc4c8;
+    border-radius:14px;
+    outline:none;
+    background:#fffafa;
+    color:#4b3437;
+}
+
+.question input:focus{
+    border-color:#a66d78;
+    box-shadow:0 0 0 3px rgba(166,109,120,.1);
+}
+
+.lock-error{
+    min-height:25px;
+    margin:15px 0;
+    color:#a34f60;
+    font-size:.9rem;
+}
+
+/* =========================================================
+   SONG SCREEN
+========================================================= */
+
+#songs{
+    background:#f7eded;
+}
+
+.song-intro{
+    margin:15px auto 30px;
+    max-width:560px;
+    opacity:.75;
+}
+
+.song-list{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin:30px auto;
+    max-width:600px;
+}
+
+.song{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    text-align:left;
+    padding:18px;
+    border-radius:20px;
+    background:rgba(255,255,255,.75);
+    border:1px solid rgba(130,80,90,.1);
+    transition:.25s ease;
+    box-shadow:0 8px 25px rgba(70,40,50,.06);
+}
+
+.song:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 30px rgba(70,40,50,.1);
+}
+
+.disc{
+    width:48px;
+    height:48px;
+    min-width:48px;
+    border-radius:50%;
+    background:
+        radial-gradient(circle,#f7eeee 0 10%,transparent 11% 25%,#a66d78 26% 29%,transparent 30%),
+        #d7a9b2;
+}
+
+.song b{
+    display:block;
+    margin-bottom:3px;
+}
+
+.song span{
+    font-size:.85rem;
+    opacity:.65;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+#intro{
+    background:#f9eeee;
+}
+
+.intro-card{
+    max-width:700px;
+    background:#fffaf8;
+    border-radius:30px;
+    padding:45px 28px;
+    box-shadow:0 20px 55px rgba(70,40,50,.08);
+}
+
+.intro-card h2{
+    margin-bottom:25px;
+}
+
+.intro-card p{
+    font-size:1.05rem;
+    line-height:2;
+}
+
+/* =========================================================
+   MEMORIES
+========================================================= */
+
+#memories{
+    background:#f5e8e7;
+}
+
+.memories-title{
+    margin-bottom:12px;
+}
+
+.memories-subtitle{
+    margin-bottom:35px;
+    opacity:.7;
+}
+
+.memory-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    margin-bottom:35px;
+}
+
+.memory-photo{
+    width:100%;
+    aspect-ratio:3/4;
+    object-fit:cover;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(70,40,50,.12);
+}
+
+@media(max-width:600px){
+    .memory-grid{
+        grid-template-columns:1fr;
+        max-width:420px;
+        margin-left:auto;
+        margin-right:auto;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    .memory-photo{
+        aspect-ratio:4/5;
+    }
+}
+
+/* =========================================================
+   PUZZLE
+========================================================= */
+
+#puzzle{
+    background:#f8ece9;
+}
+
+.puzzle-description{
+    margin:12px auto 25px;
+    opacity:.7;
+}
+
+.puzzle-board{
+    width:min(92vw,520px);
+    aspect-ratio:2/3;
+    margin:25px auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(2,1fr);
+    gap:3px;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 18px 45px rgba(70,40,50,.15);
+    background:#fff;
+}
+
+.puzzle-piece{
+    border:0;
+    padding:0;
+    margin:0;
+    background-repeat:no-repeat;
+    background-size:300% 200%;
+    background-color:#eee;
+    transition:.2s ease;
+}
+
+.puzzle-piece.selected{
+    transform:scale(.96);
+    box-shadow:inset 0 0 0 4px rgba(255,255,255,.9);
+}
+
+.puzzle-message{
+    min-height:35px;
+    margin:18px 0;
+    font-family:"Cormorant Garamond",serif;
+    font-size:1.4rem;
+}
+
+/* =========================================================
+   ENVELOPE
+========================================================= */
+
+#envelope{
+    background:#f8e8e8;
+}
+
+.envelope-area{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.envelope{
+    position:relative;
+    width:min(88vw,430px);
+    height:280px;
+    margin:35px auto;
+    cursor:pointer;
+    perspective:800px;
+}
+
+.envelope-body{
+    position:absolute;
+    inset:0;
+    background:#d9aeb4;
+    border-radius:8px;
+    box-shadow:0 20px 40px rgba(70,40,50,.16);
+    overflow:hidden;
+}
+
+.envelope-body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(145deg,transparent 49%,#c7959d 50%,transparent 51%),
+        linear-gradient(215deg,transparent 49%,#c7959d 50%,transparent 51%);
+}
+
+.envelope-flap{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:55%;
+    background:#e7c0c5;
+    clip-path:polygon(0 0,100% 0,50% 100%);
+    transform-origin:top center;
+    transition:transform .8s ease;
+    z-index:4;
+}
+
+.letter-peek{
+    position:absolute;
+    width:82%;
+    height:80%;
+    left:9%;
+    top:7%;
+    background:#fffaf3;
+    border-radius:5px;
+    z-index:2;
+    padding:25px;
+    font-family:"Cormorant Garamond",serif;
+    font-size:1.3rem;
+    transition:transform .9s ease;
+    box-shadow:0 5px 15px rgba(60,40,40,.08);
+}
+
+.envelope.open .envelope-flap{
+    transform:rotateX(180deg);
+}
+
+.envelope.open .letter-peek{
+    transform:translateY(-45%);
+}
+
+.envelope-caption{
+    font-family:"Cormorant Garamond",serif;
+    font-size:1.4rem;
+}
+
+/* =========================================================
+   LETTER / NOTEBOOK
+========================================================= */
+
+#letter{
+    background:#eadbd0;
+    align-items:flex-start;
+}
+
+.notebook{
+    position:relative;
+    width:100%;
+    max-width:760px;
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            #fffdf7 0,
+            #fffdf7 31px,
+            #eadfe0 32px
+        );
+    padding:55px 35px 65px 55px;
+    border-radius:8px;
+    box-shadow:0 20px 55px rgba(70,40,50,.16);
+    text-align:left;
+}
+
+.notebook::before{
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:38px;
+    width:1px;
+    background:#e3aeb6;
+}
+
+.notebook-header{
+    text-align:center;
+    margin-bottom:35px;
+    position:relative;
+}
+
+.notebook-header h2{
+    font-size:clamp(2.4rem,8vw,4rem);
+}
+
+.letter-text{
+    position:relative;
+    font-family:"Cormorant Garamond",serif;
+    font-size:1.3rem;
+    line-height:2.05;
+}
+
+.letter-text p{
+    margin-bottom:27px;
+}
+
+.special-memory{
+    margin:30px 0;
+    padding:22px;
+    background:rgba(255,235,238,.65);
+    border-left:4px solid #c88896;
+    border-radius:8px;
+}
+
+.cheesecake{
+    font-size:1.2rem;
+}
+
+.letter-end{
+    text-align:center;
+    margin-top:40px;
+    font-size:1.5rem;
+}
+
+/* =========================================================
+   JAR
+========================================================= */
+
+#jarSection{
+    background:#f7e9e6;
+}
+
+.jar-heading{
+    margin-bottom:8px;
+}
+
+.jar-subtitle{
+    opacity:.7;
+    margin-bottom:8px;
+}
+
+.remaining{
+    font-family:"Cormorant Garamond",serif;
+    font-size:1.3rem;
+    margin-bottom:30px;
+}
+
+.jar-wrap{
+    display:flex;
+    justify-content:center;
+    margin:20px 0 30px;
+}
+
+.jar{
+    position:relative;
+    width:210px;
+    height:260px;
+    border:6px solid rgba(160,120,130,.55);
+    border-top:0;
+    border-radius:0 0 45px 45px;
+    background:rgba(255,255,255,.28);
+    box-shadow:
+        inset 0 0 25px rgba(255,255,255,.65),
+        0 20px 45px rgba(70,40,50,.12);
+    cursor:pointer;
+    transition:.25s ease;
+}
+
+.jar:hover{
+    transform:translateY(-5px);
+}
+
+.jar::before{
+    content:"";
+    position:absolute;
+    left:-6px;
+    top:-22px;
+    width:210px;
+    height:27px;
+    border:6px solid rgba(160,120,130,.55);
+    border-radius:8px;
+    background:rgba(255,255,255,.35);
+}
+
+.jar::after{
+    content:"♡";
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:4rem;
+    color:rgba(170,100,120,.3);
+}
+
+.jar-note{
+    min-height:130px;
+    margin:25px auto;
+    max-width:600px;
+    padding:25px;
+    background:#fffaf5;
+    border-radius:20px;
+    box-shadow:0 12px 35px rgba(70,40,50,.08);
+    font-family:"Cormorant Garamond",serif;
+    font-size:1.45rem;
+    line-height:1.7;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.jar-note:empty{
+    display:none;
+}
+
+.jar-done{
+    margin:20px 0;
+    font-family:"Cormorant Garamond",serif;
+    font-size:1.5rem;
+}
+
+/* =========================================================
+   FINAL SCREEN
+========================================================= */
+
+#final{
+    background:#fffaf7;
+    overflow:hidden;
+}
+
+.final-content{
+    position:relative;
+    z-index:5;
+}
+
+.final-title{
+    opacity:0;
+    animation:finalTitle 3s ease forwards;
+    animation-delay:.7s;
+}
+
+.final-subtitle{
+    margin-top:30px;
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(1.4rem,5vw,2.3rem);
+    opacity:0;
+    animation:finalSubtitle 3s ease forwards;
+    animation-delay:2.7s;
+}
+
+@keyframes finalTitle{
+    from{
+        opacity:0;
+        transform:translateY(18px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes finalSubtitle{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.falling-layer{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:1;
+}
+
+.falling{
+    position:absolute;
+    top:-60px;
+    animation:fall linear infinite;
+    opacity:.7;
+}
+
+@keyframes fall{
+    0%{
+        transform:translateY(-80px) rotate(0deg);
     }
 
+    100%{
+        transform:translateY(115vh) rotate(360deg);
+    }
 }
 
+/* =========================================================
+   SMALL SCREENS
+========================================================= */
 
-/* Message */
+@media(max-width:600px){
 
-#message {
-    min-height: 22px;
+    .screen{
+        padding:35px 16px 60px;
+    }
 
-    margin-top: 15px;
+    .lock-card{
+        padding:30px 20px;
+    }
 
-    font-size: 14px;
+    .intro-card{
+        padding:35px 22px;
+    }
 
-    font-style: italic;
+    .notebook{
+        padding:45px 22px 55px 48px;
+    }
 
-    color: #9b696d;
+    .notebook::before{
+        left:31px;
+    }
+
+    .letter-text{
+        font-size:1.22rem;
+    }
+
+    .envelope{
+        height:230px;
+    }
+
+    .jar{
+        width:180px;
+        height:225px;
+    }
+
+    .jar::before{
+        width:180px;
+    }
 }
-        * {
-            box-sizing: border-box;
-        }
 
-        body {
-            margin: 0;
-            min-height: 100vh;
-
-            font-family: Georgia, "Times New Roman", serif;
-
-            color: #5b4646;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #f8e9e8,
-                    #f6eee4,
-                    #eee8dc
-                );
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            padding: 25px;
-        }
-
-        #lock-page {
-            width: 100%;
-            max-width: 420px;
-
-            padding: 40px 25px;
-
-            text-align: center;
-
-            background: rgba(255, 250, 245, 0.8);
-
-            border: 1px solid rgba(120, 90, 80, 0.2);
-
-            border-radius: 10px;
-
-            box-shadow:
-                0 15px 40px rgba(80, 50, 45, 0.15);
-        }
-
-        h1 {
-            font-size: 34px;
-
-            font-weight: normal;
-
-            margin-bottom: 15px;
-
-            color: #654c4c;
-        }
-
-        #lock-page > p {
-            font-size: 15px;
-
-            line-height: 1.7;
-
-            color: #806b6b;
-
-            margin-bottom: 30px;
-        }
-
-        #heart-lock {
-            font-size: 80px;
-
-            margin: 20px 0 30px;
-
-            cursor: pointer;
-
-            transition: transform 0.3s ease;
-        }
-
-        #heart-lock:hover {
-            transform: scale(1.08);
-        }
-
-        #questions p:first-child {
-            font-size: 12px;
-
-            text-transform: uppercase;
-
-            letter-spacing: 3px;
-
-            color: #a27b7b;
-        }
-
-        #questions p:nth-child(2) {
-            font-size: 18px;
-
-            line-height: 1.5;
-
-            margin-bottom: 15px;
-        }
-
-        input {
-            width: 100%;
-
-            padding: 13px;
-
-            border: none;
-
-            border-bottom: 1px solid #b89595;
-
-            background: rgba(255,255,255,0.5);
-
-            text-align: center;
-
-            font-family: Georgia, "Times New Roman", serif;
-
-            font-size: 16px;
-
-            outline: none;
-        }
-
-        input:focus {
-            border-bottom-color: #b56f77;
-        }
-
-        button {
-            margin-top: 20px;
-
-            padding: 12px 25px;
-
-            border: none;
-
-            border-radius: 25px;
-
-            background: #b9787e;
-
-            color: white;
-
-            font-family: Georgia, "Times New Roman", serif;
-
-            font-size: 15px;
-
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #a96870;
-        }
-
-    </style>
-    
+</style>
 </head>
-
 
 <body>
 
-    <main id="lock-page">
+<!-- =======================================================
+     1. LOCK
+======================================================= -->
 
-        <h1>Before you enter… ♡</h1>
+<section id="lock" class="screen">
+    <div class="lock-card">
 
-        <p>
-            There are three little things you should know by heart.
+        <div class="lock-flower">🌷</div>
+
+        <h1>Before you enter…</h1>
+
+        <p class="lock-subtitle">
+            A tiny little test for the birthday boy ♡
         </p>
 
-        <!-- The heart lock will go here -->
+        <form id="lockForm">
 
-       <div id="heart-lock">
+            <div id="questions" class="question-box"></div>
 
-    <div class="heart"></div>
+            <div id="lockError" class="lock-error"></div>
 
-    <div class="lock-symbol">
-        <div class="keyhole"></div>
+            <button type="submit" class="primary-btn">
+                Unlock ♡
+            </button>
+
+        </form>
+
     </div>
+</section>
 
-</div>
 
-       <!-- Questions will go here -->
+<!-- =======================================================
+     2. SONG SELECTION
+======================================================= -->
 
-        <div id="questions">
+<section id="songs" class="screen hidden">
+    <div class="content">
 
-    <!-- QUESTION 1 -->
+        <h2>Choose a song ♫</h2>
 
-    <div class="question active" id="question1">
+        <p class="song-intro">
+            Pick whichever one feels right.
+            This little surprise starts with you.
+        </p>
 
-        <p>Little thing 01</p>
+        <div id="songList" class="song-list"></div>
 
-        <p>What nickname do I call you? ♡</p>
+    </div>
+</section>
 
-        <input
-            type="text"
-            id="answer1"
-            placeholder="Type your answer..."
+
+<!-- =======================================================
+     3. INTRO
+======================================================= -->
+
+<section id="intro" class="screen hidden">
+    <div class="intro-card">
+
+        <h2>Happy Birthday, Carino ♡</h2>
+
+        <p>
+            I wanted to make something that felt a little more personal than
+            just sending you a birthday message. So I put together this tiny
+            corner of the internet filled with things that remind me of you.
+            There are memories, little surprises, words I wanted you to read,
+            and a few things that are very specifically us. I hope you take
+            your time going through it. Most importantly, I hope you know how
+            much you mean to me.
+        </p>
+
+        <br>
+
+        <button class="primary-btn" type="button" onclick="showSection('memories')">
+            Start ♡
+        </button>
+
+    </div>
+</section>
+
+
+<!-- =======================================================
+     4. MEMORIES
+======================================================= -->
+
+<section id="memories" class="screen hidden">
+    <div class="content">
+
+        <h2 class="memories-title">
+            The memories we share
+        </h2>
+
+        <p class="memories-subtitle">
+            A few little moments I never want to forget.
+        </p>
+
+        <div class="memory-grid">
+
+            <img
+                class="memory-photo"
+                src="2a9c0291-d66a-46a7-bd40-6d751050d81c.JPG"
+                alt="A memory together"
+            >
+
+            <img
+                class="memory-photo"
+                src="IMG_6830.jpg"
+                alt="A memory together"
+            >
+
+            <img
+                class="memory-photo"
+                src="3F4401DF-DBB8-4E14-A1D9-EA782CFC29D6.jpeg"
+                alt="A memory together"
+            >
+
+        </div>
+
+        <button class="primary-btn" type="button" onclick="showSection('puzzle')">
+            There's something to solve 🧩
+        </button>
+
+    </div>
+</section>
+
+
+<!-- =======================================================
+     5. ROSE PUZZLE
+======================================================= -->
+
+<section id="puzzle" class="screen hidden">
+    <div class="content">
+
+        <h2>Put it together 🌹</h2>
+
+        <p class="puzzle-description">
+            Six little pieces. One little memory.
+        </p>
+
+        <div id="puzzleBoard" class="puzzle-board"></div>
+
+        <div id="puzzleMessage" class="puzzle-message">
+            Tap two pieces to swap them.
+        </div>
+
+        <button
+            id="puzzleNext"
+            class="primary-btn hidden"
+            type="button"
+            onclick="showSection('envelope')"
         >
-
-        <button onclick="checkAnswer(1)">
             Continue ♡
         </button>
 
     </div>
+</section>
 
 
-    <!-- QUESTION 2 -->
+<!-- =======================================================
+     6. ENVELOPE
+======================================================= -->
 
-    <div class="question" id="question2">
+<section id="envelope" class="screen hidden">
+    <div class="content envelope-area">
 
-        <p>Little thing 02</p>
+        <h2>A letter for you 💌</h2>
 
-        <p>When is our anniversary? 🌷</p>
+        <p class="envelope-caption">
+            Tap the envelope.
+        </p>
 
-        <input
-            type="text"
-            id="answer2"
-            placeholder="Day + month..."
+        <div
+            id="envelopeBox"
+            class="envelope"
+            onclick="openEnvelope()"
+            role="button"
+            aria-label="Open the envelope"
         >
 
-        <button onclick="checkAnswer(2)">
-            Continue ♡
+            <div class="letter-peek">
+                For Carino ♡
+            </div>
+
+            <div class="envelope-body"></div>
+
+            <div class="envelope-flap"></div>
+
+        </div>
+
+        <p class="small">
+            There's something I really wanted to tell you.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- =======================================================
+     7. LETTER
+======================================================= -->
+
+<section id="letter" class="screen hidden">
+
+    <div class="notebook">
+
+        <div class="notebook-header">
+            <h2>Dear Carino, ♡</h2>
+        </div>
+
+        <div class="letter-text">
+
+            <p>
+                There are so many little things about us that stay in my mind,
+                even the ones that probably seem completely ordinary.
+            </p>
+
+            <p>
+                I love that we have spent time together with your family and
+                with my brothers. I love the days when we watched movies
+                together, and especially those nights when somehow we would
+                start talking and suddenly it was already two or three in the
+                morning. I don't even know how the hours disappeared so quickly.
+            </p>
+
+            <p>
+                I loved cooking together too. Honestly, half the time I wasn't
+                even concentrating on what we were cooking because I was too busy
+                watching you. I would end up taking videos of you because I
+                genuinely love taking videos of you. And you never really let
+                me do much work while we were cooking anyway.
+            </p>
+
+            <p>
+                You used to be there whenever I needed you, except for those
+                times when you were busy, and that meant more to me than I
+                probably said out loud.
+            </p>
+
+            <p>
+                And then there were the flowers.
+            </p>
+
+            <div class="special-memory">
+
+                <p>
+                    Whenever you went somewhere and got flowers, you would get
+                    them for me. And if you happened to see flowers somewhere,
+                    you would sometimes just pick one and give it to me.
+                </p>
+
+                <p>
+                    Even those tiny little sunflower-looking flowers make me
+                    smile because you would pick six or seven of them and make
+                    this tiny little bouquet.
+                </p>
+
+            </div>
+
+            <p>
+                I absolutely adore hearing you sing. You could sing the same
+                song a million times and I would still want to hear you sing
+                it again. There is just something about hearing your voice that
+                I love, and I don't think I could ever get tired of it.
+            </p>
+
+            <p>
+                And I can never forget the first bouquet you gave me.
+            </p>
+
+            <div class="special-memory">
+
+                <p>
+                    It had yellow flowers, purple flowers whose name I still
+                    don't know, a pink rose, and hibiscus. It was the first
+                    bouquet and the first flowers I received from you, so it
+                    became special to me in a way that probably had nothing to
+                    do with the flowers themselves.
+                </p>
+
+            </div>
+
+            <p>
+                It's funny because some of my favourite memories aren't even
+                huge moments. They're the little things. Cooking. Singing.
+                Watching movies. Staying awake way too late. You bringing me
+                flowers. Me watching you while you're doing something and
+                secretly taking another video.
+            </p>
+
+            <p class="cheesecake">
+                And yes… after all this time, I still remember the cheesecake.
+                I asked for cheesecake for FOUR MONTHS and somehow I still
+                haven't received it. 😭
+            </p>
+
+            <p>
+                But jokes aside, no matter who you become, or how much you
+                change, I know there will always be a part of me that cares
+                about you and adores you.
+            </p>
+
+            <p>
+                I hope you know that you are loved. I hope you know that you
+                matter. And I hope you know that all those tiny memories we
+                made have a special place in my heart.
+            </p>
+
+            <p>
+                Happy birthday, Carino. ♡
+            </p>
+
+            <p class="letter-end">
+                I am STILL waiting for my cheesecake. 😭🤍
+            </p>
+
+        </div>
+
+        <div style="text-align:center;margin-top:45px;">
+
+            <button
+                class="primary-btn"
+                type="button"
+                onclick="showSection('jarSection')"
+            >
+                One more little thing… 🫙
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =======================================================
+     8. LOVE NOTE JAR
+======================================================= -->
+
+<section id="jarSection" class="screen hidden">
+
+    <div class="content">
+
+        <h2 class="jar-heading">A jar of little notes 🫙</h2>
+
+        <p class="jar-subtitle">
+            Every time you tap the jar, one note appears.
+        </p>
+
+        <div id="remainingCount" class="remaining">
+            10 notes remaining ♡
+        </div>
+
+        <div class="jar-wrap">
+
+            <div
+                id="jarVisual"
+                class="jar"
+                onclick="openNote()"
+                role="button"
+                aria-label="Open a love note"
+            ></div>
+
+        </div>
+
+        <div id="jarNote" class="jar-note"></div>
+
+        <div id="jarDone" class="jar-done"></div>
+
+        <button
+            id="jarFinish"
+            class="primary-btn hidden"
+            type="button"
+            onclick="showSection('final')"
+        >
+            Finish the surprise ✨
         </button>
 
     </div>
 
+</section>
 
-    <!-- QUESTION 3 -->
 
-    <div class="question" id="question3">
+<!-- =======================================================
+     9. FINAL
+======================================================= -->
 
-        <p>Little thing 03</p>
+<section id="final" class="screen hidden">
 
-        <p>What's my favourite flower? 🌸</p>
+    <div id="fallingLayer" class="falling-layer"></div>
 
-        <input
-            type="text"
-            id="answer3"
-            placeholder="Type your answer..."
-        >
+    <div class="final-content">
 
-        <button onclick="checkAnswer(3)">
-            Unlock ♡
-        </button>
+        <h1 class="final-title">
+            Happy Birthday, Carino ♡
+        </h1>
+
+        <div class="final-subtitle">
+            You are loved more than you imagine.
+        </div>
 
     </div>
 
+</section>
 
-    <p id="message"></p>
 
-</div>
-    </main>
+<!-- =======================================================
+     AUDIO
+======================================================= -->
 
-</body>
+<audio id="audioPlayer" preload="auto"></audio>
+
+
 <script>
 
-    const correctAnswers = {
+/* =========================================================
+   WEBSITE SETTINGS
+   Change things here later if you want to add/edit sections.
+========================================================= */
 
-        1: "carino",
-        2: "23 january",
-        3: "lily"
+const SECTION_IDS = [
+    "lock",
+    "songs",
+    "intro",
+    "memories",
+    "puzzle",
+    "envelope",
+    "letter",
+    "jarSection",
+    "final"
+];
 
-    };
+
+/* =========================================================
+   SONGS
+   These files must be in the SAME folder as index.html.
+========================================================= */
+
+const SONGS = [
+    {
+        title: "I Thought I Saw Your Face Today",
+        artist: "She & Him",
+        file: "AUDIO-2026-09-05-14-00-58.mp3"
+    },
+    {
+        title: "The Way I Loved You",
+        artist: "Taylor Swift",
+        file: "AUDIO-2026-09-05-14-01-16(1).mp3"
+    },
+    {
+        title: "Can't Help Falling in Love",
+        artist: "Elvis Presley",
+        file: "AUDIO-2026-09-05-14-01-33.mp3"
+    }
+];
 
 
-    function checkAnswer(number) {
+/* =========================================================
+   PUZZLE IMAGE
+========================================================= */
 
-        const input =
-            document.getElementById(
-                "answer" + number
+const PUZZLE_IMAGE =
+    "45B4C78E-F6F0-4160-8CBE-3E776BBA2E0C.jpeg";
+
+
+/* =========================================================
+   LOCK QUESTIONS
+========================================================= */
+
+const LOCK_QUESTIONS = [
+
+    {
+        question: "What nickname do I call you? ♡",
+        answers: [
+            "carino"
+        ]
+    },
+
+    {
+        question: "When is our anniversary? 🌷",
+        answers: [
+            "23 january",
+            "23rd january",
+            "january 23",
+            "january 23rd",
+            "23/01",
+            "23-01",
+            "23.01"
+        ]
+    },
+
+    {
+        question: "What's my favourite flower? 🌸",
+        answers: [
+            "lily"
+        ]
+    }
+
+];
+
+
+/* =========================================================
+   10 LOVE NOTES
+========================================================= */
+
+const NOTES = [
+
+    "You are one of my favourite people in this whole world. ♡",
+
+    "I could listen to you sing the same song a million times and still smile.",
+
+    "Some of my favourite memories are the quiet little moments we shared.",
+
+    "You bringing me flowers will always be one of the sweetest things to me. 🌷",
+
+    "I love the way ordinary moments became special when I was with you.",
+
+    "You will always have a special little place in my heart. ♡",
+
+    "I hope this year gives you so many reasons to smile.",
+
+    "Thank you for all the little things you probably didn't realize I noticed.",
+
+    "I hope you never forget how loved and important you are.",
+
+    "And yes… I still want my cheesecake. 😭🤍"
+
+];
+
+
+/* =========================================================
+   GLOBAL VARIABLES
+========================================================= */
+
+const audioPlayer = document.getElementById("audioPlayer");
+
+let selectedSong = null;
+
+let puzzleTiles = [];
+let puzzleSelected = null;
+let puzzleSolved = false;
+
+let envelopeOpened = false;
+
+let notePool = [];
+let notesInitialized = false;
+
+
+/* =========================================================
+   NORMALIZE TEXT
+   This prevents problems like:
+   " Lily "
+   "LILY"
+   "lily"
+   all being treated differently.
+========================================================= */
+
+function normalizeAnswer(value){
+
+    return String(value || "")
+        .toLowerCase()
+        .trim()
+        .replace(/[’']/g, "")
+        .replace(/[^a-z0-9]+/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+
+}
+
+
+/* =========================================================
+   LOCK QUESTIONS
+========================================================= */
+
+function buildLockQuestions(){
+
+    const container = document.getElementById("questions");
+
+    container.innerHTML = "";
+
+    LOCK_QUESTIONS.forEach((item, index) => {
+
+        const wrapper = document.createElement("div");
+
+        wrapper.className = "question";
+
+        wrapper.innerHTML = `
+            <label for="answer${index}">
+                ${item.question}
+            </label>
+
+            <input
+                id="answer${index}"
+                type="text"
+                autocomplete="off"
+                autocapitalize="none"
+                spellcheck="false"
+                placeholder="Your answer…"
+            >
+        `;
+
+        container.appendChild(wrapper);
+
+    });
+
+}
+
+
+/* =========================================================
+   CHECK LOCK
+========================================================= */
+
+function checkLock(event){
+
+    if(event){
+        event.preventDefault();
+    }
+
+    const error = document.getElementById("lockError");
+
+    let allCorrect = true;
+
+    LOCK_QUESTIONS.forEach((item, index) => {
+
+        const input = document.getElementById(`answer${index}`);
+
+        const userAnswer = normalizeAnswer(input.value);
+
+        const validAnswers = item.answers.map(normalizeAnswer);
+
+        if(!validAnswers.includes(userAnswer)){
+            allCorrect = false;
+        }
+
+    });
+
+
+    if(allCorrect){
+
+        error.textContent = "";
+
+        showSection("songs");
+
+    }else{
+
+        error.textContent =
+            "One of the answers isn't quite right. Try again, birthday boy. ♡";
+
+    }
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+   All section changes go through this one function.
+   This makes the website much easier to continue later.
+========================================================= */
+
+function showSection(id){
+
+    SECTION_IDS.forEach(sectionId => {
+
+        const section = document.getElementById(sectionId);
+
+        if(section){
+            section.classList.add("hidden");
+        }
+
+    });
+
+
+    const target = document.getElementById(id);
+
+    if(!target){
+        console.error("Section not found:", id);
+        return;
+    }
+
+
+    target.classList.remove("hidden");
+
+    window.scrollTo(0,0);
+
+
+    /* Section-specific setup */
+
+    if(id === "puzzle"){
+        initializePuzzle();
+    }
+
+    if(id === "jarSection"){
+        initializeNotes();
+    }
+
+    if(id === "final"){
+        createFallingElements();
+    }
+
+}
+
+
+/* =========================================================
+   SONG LIST
+========================================================= */
+
+function buildSongs(){
+
+    const list = document.getElementById("songList");
+
+    list.innerHTML = "";
+
+    SONGS.forEach((song, index) => {
+
+        const item = document.createElement("button");
+
+        item.type = "button";
+        item.className = "song";
+
+        item.innerHTML = `
+            <div class="disc"></div>
+
+            <div>
+                <b>${song.title}</b>
+                <span>${song.artist}</span>
+            </div>
+        `;
+
+        item.addEventListener("click", () => {
+            selectSong(index);
+        });
+
+        list.appendChild(item);
+
+    });
+
+}
+
+
+/* =========================================================
+   SELECT SONG
+========================================================= */
+
+function selectSong(index){
+
+    const song = SONGS[index];
+
+    if(!song){
+        return;
+    }
+
+    selectedSong = index;
+
+    audioPlayer.pause();
+
+    audioPlayer.src = song.file;
+
+    audioPlayer.loop = true;
+
+    audioPlayer.currentTime = 0;
+
+
+    /* Because this happens directly from a user tap,
+       the browser is much more likely to allow playback. */
+
+    const playPromise = audioPlayer.play();
+
+    if(playPromise !== undefined){
+
+        playPromise.catch(() => {
+
+            console.log(
+                "Audio could not autoplay. The browser may require another tap."
             );
 
-        const userAnswer =
-            input.value
-                .trim()
-                .toLowerCase()
-                .replace(/\s+/g, " ");
-
-        const message =
-            document.getElementById("message");
-
-
-        /* Empty answer */
-
-        if (userAnswer === "") {
-
-            message.textContent =
-                "Give it a little try first. ♡";
-
-            return;
-        }
-
-
-        /* Correct answer */
-
-        if (
-            userAnswer ===
-            correctAnswers[number]
-        ) {
-
-            message.textContent =
-                "That's right. ♡";
-
-
-            if (number < 3) {
-
-                setTimeout(function() {
-
-                    document
-                        .getElementById(
-                            "question" + number
-                        )
-                        .classList.remove("active");
-
-                    document
-                        .getElementById(
-                            "question" + (number + 1)
-                        )
-                        .classList.add("active");
-
-                    document.getElementById(
-                        "message"
-                    ).textContent = "";
-
-                    document.getElementById(
-                        "answer" + (number + 1)
-                    ).focus();
-
-                }, 600);
-
-            }
-
-            else {
-
-                unlockHeart();
-
-            }
-
-        }
-
-
-        /* Wrong answer */
-
-        else {
-
-            message.textContent =
-                "Hmm… not quite. Think again. ♡";
-
-            input.value = "";
-
-            input.focus();
-
-        }
+        });
 
     }
 
 
-    function unlockHeart() {
+    showSection("intro");
 
-        const heartLock =
-            document.getElementById(
-                "heart-lock"
-            );
+}
 
-        heartLock.style.transform =
-            "scale(1.15)";
 
-        document.getElementById(
-            "message"
-        ).textContent =
-            "You remembered everything. ♡";
+/* =========================================================
+   PUZZLE
+========================================================= */
 
-        setTimeout(function() {
+function shuffleArray(array){
 
-            heartLock.style.opacity = "0";
+    const copy = [...array];
 
-            heartLock.style.transform =
-                "scale(1.4)";
+    for(let i = copy.length - 1; i > 0; i--){
 
-        }, 700);
+        const j = Math.floor(Math.random() * (i + 1));
+
+        [copy[i], copy[j]] = [copy[j], copy[i]];
 
     }
+
+    return copy;
+
+}
+
+
+function initializePuzzle(){
+
+    if(puzzleSolved){
+        return;
+    }
+
+    const board = document.getElementById("puzzleBoard");
+
+    board.innerHTML = "";
+
+    puzzleSelected = null;
+
+
+    /* Six pieces.
+       Each number represents the correct position. */
+
+    puzzleTiles = shuffleArray([0,1,2,3,4,5]);
+
+
+    /* Make sure it doesn't accidentally start solved. */
+
+    if(puzzleTiles.every((value,index) => value === index)){
+
+        [puzzleTiles[0],puzzleTiles[1]] =
+        [puzzleTiles[1],puzzleTiles[0]];
+
+    }
+
+
+    puzzleTiles.forEach((correctPosition, currentPosition) => {
+
+        const piece = document.createElement("button");
+
+        piece.type = "button";
+
+        piece.className = "puzzle-piece";
+
+        piece.dataset.correct = correctPosition;
+
+        piece.style.backgroundImage =
+            `url("${PUZZLE_IMAGE}")`;
+
+        const column = correctPosition % 3;
+
+        const row = Math.floor(correctPosition / 3);
+
+        piece.style.backgroundPosition =
+            `${column * 50}% ${row * 100}%`;
+
+        piece.addEventListener("click", () => {
+
+            handlePuzzleClick(currentPosition);
+
+        });
+
+        board.appendChild(piece);
+
+    });
+
+}
+
+
+function handlePuzzleClick(position){
+
+    if(puzzleSolved){
+        return;
+    }
+
+
+    const pieces =
+        [...document.querySelectorAll(".puzzle-piece")];
+
+
+    /* First selected piece */
+
+    if(puzzleSelected === null){
+
+        puzzleSelected = position;
+
+        pieces[position].classList.add("selected");
+
+        return;
+
+    }
+
+
+    /* Tapping the same piece again deselects it. */
+
+    if(puzzleSelected === position){
+
+        pieces[position].classList.remove("selected");
+
+        puzzleSelected = null;
+
+        return;
+
+    }
+
+
+    /* Swap */
+
+    const first = puzzleSelected;
+
+    const second = position;
+
+
+    [puzzleTiles[first], puzzleTiles[second]] =
+    [puzzleTiles[second], puzzleTiles[first]];
+
+
+    renderPuzzle();
+
+
+    puzzleSelected = null;
+
+
+    if(isPuzzleSolved()){
+
+        puzzleSolved = true;
+
+        document.getElementById("puzzleMessage").textContent =
+            "You did it. 🌹";
+
+        document
+            .getElementById("puzzleNext")
+            .classList.remove("hidden");
+
+    }
+
+}
+
+
+function renderPuzzle(){
+
+    const pieces =
+        [...document.querySelectorAll(".puzzle-piece")];
+
+
+    pieces.forEach((piece,index) => {
+
+        const correctPosition = puzzleTiles[index];
+
+        const column = correctPosition % 3;
+
+        const row = Math.floor(correctPosition / 3);
+
+        piece.dataset.correct = correctPosition;
+
+        piece.style.backgroundPosition =
+            `${column * 50}% ${row * 100}%`;
+
+        piece.classList.remove("selected");
+
+    });
+
+}
+
+
+function isPuzzleSolved(){
+
+    return puzzleTiles.every(
+        (value,index) => value === index
+    );
+
+}
+
+
+/* =========================================================
+   ENVELOPE
+========================================================= */
+
+function openEnvelope(){
+
+    if(envelopeOpened){
+        return;
+    }
+
+    envelopeOpened = true;
+
+    const envelope =
+        document.getElementById("envelopeBox");
+
+    envelope.classList.add("open");
+
+
+    /* Give the flap time to open before moving on. */
+
+    setTimeout(() => {
+
+        showSection("letter");
+
+    }, 1500);
+
+}
+
+
+/* =========================================================
+   LOVE NOTE JAR
+========================================================= */
+
+function initializeNotes(){
+
+    if(notesInitialized){
+        return;
+    }
+
+    notePool = shuffleArray(NOTES);
+
+    notesInitialized = true;
+
+    document.getElementById("jarNote").textContent = "";
+
+    document.getElementById("jarDone").textContent = "";
+
+    document
+        .getElementById("jarFinish")
+        .classList.add("hidden");
+
+    updateRemaining();
+
+}
+
+
+/* =========================================================
+   OPEN ONE NOTE
+========================================================= */
+
+function openNote(){
+
+    if(notePool.length === 0){
+        return;
+    }
+
+
+    const note = notePool.pop();
+
+    const noteBox =
+        document.getElementById("jarNote");
+
+    noteBox.textContent = note;
+
+
+    updateRemaining();
+
+
+    if(notePool.length === 0){
+
+        document.getElementById("jarDone").textContent =
+            "That's all ten. ♡";
+
+        document
+            .getElementById("jarFinish")
+            .classList.remove("hidden");
+
+    }
+
+}
+
+
+/* =========================================================
+   UPDATE REMAINING COUNT
+========================================================= */
+
+function updateRemaining(){
+
+    const count = notePool.length;
+
+    const element =
+        document.getElementById("remainingCount");
+
+    element.textContent =
+        `${count} ${count === 1 ? "note" : "notes"} remaining ♡`;
+
+}
+
+
+/* =========================================================
+   FINAL FALLING FLOWERS / LEAVES / STARS
+========================================================= */
+
+function createFallingElements(){
+
+    const layer =
+        document.getElementById("fallingLayer");
+
+    /* Prevent duplicates if final screen is revisited. */
+
+    if(layer.dataset.created === "true"){
+        return;
+    }
+
+    layer.dataset.created = "true";
+
+
+    const symbols = [
+        "🌸",
+        "🌷",
+        "🌿",
+        "🍃",
+        "✦",
+        "✧",
+        "♡"
+    ];
+
+
+    for(let i = 0; i < 42; i++){
+
+        const element =
+            document.createElement("span");
+
+        element.className = "falling";
+
+        element.textContent =
+            symbols[Math.floor(Math.random() * symbols.length)];
+
+
+        element.style.left =
+            `${Math.random() * 100}%`;
+
+        element.style.fontSize =
+            `${14 + Math.random() * 22}px`;
+
+        element.style.animationDuration =
+            `${7 + Math.random() * 9}s`;
+
+        element.style.animationDelay =
+            `${Math.random() * 8}s`;
+
+        element.style.transform =
+            `rotate(${Math.random() * 180}deg)`;
+
+
+        layer.appendChild(element);
+
+    }
+
+}
+
+
+/* =========================================================
+   STARTUP
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    buildLockQuestions();
+
+    buildSongs();
+
+
+    document
+        .getElementById("lockForm")
+        .addEventListener("submit", checkLock);
+
+});
 
 </script>
+
+</body>
 </html>
